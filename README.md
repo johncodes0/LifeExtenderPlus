@@ -1,7 +1,7 @@
 # Spring 2017, Software Engineering Project 
 
 Team: 
-  Trirmadura J Ariyawansa
+  Trirmadura J Ariyawansa\n
   John Eng
   Daniel Huang
   Chris Kim
