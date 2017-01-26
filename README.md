@@ -1,6 +1,6 @@
 # Spring 2017, Software Engineering Project 
 
-Team: 
+Team:   
   Trirmadura J Ariyawansa  
   John Eng  
   Daniel Huang  
