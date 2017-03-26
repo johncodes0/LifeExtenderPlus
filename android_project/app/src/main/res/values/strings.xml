@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LifeExtenderPlus</string>
+    <string name="title_activity_home_tab">HomeTab</string>
+    <string name="title_activity_stats_tab">StatsTab</string>
+    <string name="title_activity_goals_tab">GoalsTab</string>
+    <string name="title_activity_map_tab">MapTab</string>
+    <string name="title_activity_settings_tab">SettingsTab</string>
+</resources>
