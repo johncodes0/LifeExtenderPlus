@@ -18,7 +18,9 @@
         android:layout_marginTop="16dp"
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription=""
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/ibAddGoal"
@@ -31,13 +33,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/addicon"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Goals"
+        android:text="@string/goalsheading"
         android:textAlignment="center"
         android:textSize="36sp"
         tools:layout_constraintTop_creator="1"
