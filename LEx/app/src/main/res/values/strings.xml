@@ -79,4 +79,5 @@
     <string name="name_of_goal">Name of Goal:</string>
     <string name="goalname">Name of Goal:</string>
     <string name="goalsheading">Goals</string>
+    <string name="title_activity_stats_tab">StatsTab</string>
 </resources>
