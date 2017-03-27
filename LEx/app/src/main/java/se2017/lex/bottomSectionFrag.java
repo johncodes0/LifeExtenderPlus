@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.content.Intent;
 
 public class bottomSectionFrag extends Fragment {
 
@@ -14,4 +15,7 @@ public class bottomSectionFrag extends Fragment {
         View view = inflater.inflate(R.layout.bottom_frag, container, false);
         return view;
     }
+
+
+
 }
