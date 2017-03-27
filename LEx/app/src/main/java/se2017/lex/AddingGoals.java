@@ -37,6 +37,7 @@ public class AddingGoals extends AppCompatActivity {
         for (int i = 0; i < GoalsTab.Goals.length; i++) {
             if(GoalsTab.Goals[i] == null) {
                 GoalsTab.Goals[i] = NewG;
+                break;
             }
         }
 
