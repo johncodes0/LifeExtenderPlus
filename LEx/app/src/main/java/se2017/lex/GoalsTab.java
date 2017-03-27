@@ -37,6 +37,12 @@ public class GoalsTab extends AppCompatActivity {
                 GoalProgress.setTextSize(20);
                 GoalProgress.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
                 ((LinearLayout) linearLayout).addView(GoalProgress);
+
+                ProgressBar GProgressBar = new ProgressBar(this);
+                GProgressBar.setMax(Goals[i].t);
+                GProgressBar.setProgress(Goals[i].c);
+                GProgressBar.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
+                ((LinearLayout) linearLayout).addView(GProgressBar);
             }
         }
     }
