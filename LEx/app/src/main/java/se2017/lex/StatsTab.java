@@ -13,6 +13,8 @@ import android.view.MenuItem;
 
 public class StatsTab extends AppCompatActivity {
 
+    public static IndexObjects HealthInfo = new IndexObjects(200, 60, 60);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,11 +26,11 @@ public class StatsTab extends AppCompatActivity {
     protected void calculateHI () {
         TextView output = (TextView) findViewById(R.id.tv_HI);
 
-        int H_0 = 200; //inital index
+        int H_0 = HealthInfo.currentHI; //inital index
         int L = 1; //low intensity multiplier
         int H = 3; //high intensity multiplier
-        int x1 = 60; //time for low intensity periods
-        int x2 = 60; //time for high intensity periods
+        int x1 = HealthInfo.LITime; //time for low intensity periods (minutes)
+        int x2 = HealthInfo.HITime; //time for high intensity periods (minutes)
         int H_nm1 = H_0; //previous health index
         int H_n = 0; //current health index
 
@@ -51,7 +53,7 @@ public class StatsTab extends AppCompatActivity {
         btn_HIoutput.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 //call function to calculate health index
-                calculateHI(v);
+                calculateHI();
                 //second click changes progress bar visibility to "visible"
                 //should be able to check value of HI and set current progress status accordingly
                 progressBar.setVisibility(View.VISIBLE);

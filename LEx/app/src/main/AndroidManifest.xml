@@ -24,9 +24,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".GoalsTab" />
-        <activity
-            android:name=".SettingsTab"
-            android:label="@string/title_activity_settings_tab" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -46,7 +43,8 @@
         <activity
             android:name=".StatsTab"
             android:label="@string/title_activity_stats_tab"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SettingsTab"></activity>
     </application>
 
 </manifest>
