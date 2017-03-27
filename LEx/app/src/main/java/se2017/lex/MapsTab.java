@@ -46,6 +46,7 @@ package se2017.lex;
 //}
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
@@ -53,6 +54,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -249,5 +251,27 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
             // other 'case' lines to check for other permissions this app might request.
             // You can add here other case statements according to your requirement.
         }
+    }
+
+    //Fragment Links
+    public void gotoHome(View v) {
+        Intent toHome = new Intent(this, HomeTab.class);
+        startActivity(toHome);
+    }
+    public void gotoStats(View v) {
+        Intent toStats = new Intent(this, StatsTab.class);
+        startActivity(toStats);
+    }
+    public void gotoMaps(View v) {
+        Intent toMaps = new Intent(this, MapsTab.class);
+        startActivity(toMaps);
+    }
+    public void gotoSettings(View v) {
+        Intent toSettings = new Intent(this, SettingsTab.class);
+        startActivity(toSettings);
+    }
+    public void gotoGoals(View v) {
+        Intent toGoals = new Intent(this, GoalsTab.class);
+        startActivity(toGoals);
     }
 }
