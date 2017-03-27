@@ -25,14 +25,20 @@ public class GoalsTab extends AppCompatActivity {
 
         for (int i = 0; i < Goals.length; i++)
         {
-            TextView tv = new TextView(this);
-            tv.setText(Goals[i].n);
-            linlay.addView(tv);
+            if(Goals[i] == null)
+            {
 
-            ProgressBar pb = new ProgressBar(this);
-            pb.setMax(Goals[i].t);
-            pb.setProgress(Goals[i].c);
-            linlay.addView(pb);
+            }
+            else {
+                TextView tv = new TextView(this);
+                tv.setText(Goals[i].n);
+                linlay.addView(tv);
+
+                ProgressBar pb = new ProgressBar(this);
+                pb.setMax(Goals[i].t);
+                pb.setProgress(Goals[i].c);
+                linlay.addView(pb);
+            }
         }
 
 
