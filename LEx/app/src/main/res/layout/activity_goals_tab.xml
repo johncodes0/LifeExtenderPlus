@@ -51,4 +51,16 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="se2017.lex.bottomSectionFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/bottom_frag"
+        app:layout_constraintVertical_bias="0.995" />
+
 </android.support.constraint.ConstraintLayout>

@@ -18,28 +18,6 @@ public class GoalsTab extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goals_tab);
 
-        //Add linear layout
-        LinearLayout linlay = new LinearLayout(this);
-        setContentView(linlay);
-        linlay.setOrientation(LinearLayout.VERTICAL);
-
-        for (int i = 0; i < Goals.length; i++)
-        {
-            if(Goals[i] == null)
-            {
-
-            }
-            else {
-                TextView tv = new TextView(this);
-                tv.setText(Goals[i].n);
-                linlay.addView(tv);
-
-                ProgressBar pb = new ProgressBar(this);
-                pb.setMax(Goals[i].t);
-                pb.setProgress(Goals[i].c);
-                linlay.addView(pb);
-            }
-        }
 
 
     }
