@@ -17,18 +17,20 @@ public class StatsTab extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats_tab);
+
+        calculateHI();
     }
 
-    protected void calculateHI (View v) {
+    protected void calculateHI () {
         TextView output = (TextView) findViewById(R.id.tv_HI);
 
-        int H_0 = 200;
-        int L = 1;
-        int H = 3;
-        int x1 = 60;
-        int x2 = 60;
-        int H_nm1 = H_0;
-        int H_n = 0;
+        int H_0 = 200; //inital index
+        int L = 1; //low intensity multiplier
+        int H = 3; //high intensity multiplier
+        int x1 = 60; //time for low intensity periods
+        int x2 = 60; //time for high intensity periods
+        int H_nm1 = H_0; //previous health index
+        int H_n = 0; //current health index
 
         //calculates current HI
         if (x1 > 30) {
@@ -56,6 +58,8 @@ public class StatsTab extends AppCompatActivity {
             }
         });
     }
+
+
 
     //Fragment Links
     public void gotoHome(View v) {
