@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 
 
+
+
 public class AddingGoals extends AppCompatActivity {
 
     @Override
@@ -30,6 +32,14 @@ public class AddingGoals extends AppCompatActivity {
         int cur = Integer.valueOf(currentProgress.getText().toString());
         int targ = Integer.valueOf(goalTarget.getText().toString());
         String name = String.valueOf(goalName.getText());
-    }
 
+        GoalObjects NewG = new GoalObjects(cur, targ, name);
+
+        for (int i = 0; i < GoalsTab.Goals.length; i++) {
+            if(GoalsTab.Goals[i] == null) {
+                GoalsTab.Goals[i] = NewG;
+            }
+        }
+
+    }
 }
