@@ -16,9 +16,9 @@ public class SettingsTab extends AppCompatActivity {
 
     public void confirmGoal(View v) {
         //Get the inputs
-        EditText currentHI = (EditText) findViewById(R.id.tfgoalname);
-        EditText HITime = (EditText) findViewById(R.id.tfcurrent);
-        EditText LITime = (EditText) findViewById(R.id.tfgoaltarget);
+        EditText currentHI = (EditText) findViewById(R.id.tfcurrentind);
+        EditText HITime = (EditText) findViewById(R.id.tfhitime);
+        EditText LITime = (EditText) findViewById(R.id.tflitime);
 
         //Process data
         int cur = Integer.valueOf(currentHI.getText().toString());
