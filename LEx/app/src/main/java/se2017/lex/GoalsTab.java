@@ -1,11 +1,13 @@
 package se2017.lex;
 
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.LinearLayout;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
@@ -18,7 +20,23 @@ public class GoalsTab extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goals_tab);
 
+        final RelativeLayout rl = (RelativeLayout) findViewById(R.id.rl);
+        final TextView[] tv = new TextView[10];
 
+        for (int i = 0; i < Goals.length; i++)
+        {
+            tv[i] = new TextView(this);
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    (int)RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    (int)RelativeLayout.LayoutParams.WRAP_CONTENT);
+            params.leftMargin = 50;
+            params.topMargin = i*50;
+            tv[i].setText(Goals[i].n);
+            tv[i].setTextSize((float) 20);
+            tv[i].setPadding(20,50,20,50);
+            tv[i].setLayoutParams(params);
+            rl.addView(tv[i]);
+        }
 
     }
 

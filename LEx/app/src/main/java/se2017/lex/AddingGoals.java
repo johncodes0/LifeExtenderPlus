@@ -8,7 +8,6 @@ import android.widget.EditText;
 
 
 
-
 public class AddingGoals extends AppCompatActivity {
 
     @Override
@@ -40,6 +39,9 @@ public class AddingGoals extends AppCompatActivity {
                 GoalsTab.Goals[i] = NewG;
             }
         }
+
+        Intent toGoals = new Intent(this, GoalsTab.class);
+        startActivity(toGoals);
 
     }
 }
