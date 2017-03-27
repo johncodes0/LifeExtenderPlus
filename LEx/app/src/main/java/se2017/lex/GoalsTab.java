@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
+import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.view.ViewGroup.LayoutParams;
@@ -38,7 +39,7 @@ public class GoalsTab extends AppCompatActivity {
                 GoalProgress.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
                 ((LinearLayout) linearLayout).addView(GoalProgress);
 
-                ProgressBar GProgressBar = new ProgressBar(this);
+                ProgressBar GProgressBar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
                 GProgressBar.setMax(Goals[i].t);
                 GProgressBar.setProgress(Goals[i].c);
                 GProgressBar.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT));
