@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name of Goal: "
+        android:text="@string/name_of_goal"
         android:textSize="24sp"
         tools:layout_constraintTop_creator="1"
         android:layout_marginStart="16dp"
@@ -23,7 +23,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Goal Target: "
+        android:text="@string/goal_target"
         android:textSize="24sp"
         tools:layout_constraintTop_creator="1"
         android:layout_marginStart="16dp"
@@ -36,7 +36,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Current:"
+        android:text="@string/current"
         android:textSize="24sp"
         tools:layout_constraintTop_creator="1"
         tools:layout_constraintBottom_creator="1"
@@ -45,6 +45,7 @@
         tools:layout_constraintLeft_creator="1"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
-        android:layout_marginLeft="16dp" />
+        android:layout_marginLeft="16dp"
+        tools:ignore="RtlHardcoded" />
 
 </android.support.constraint.ConstraintLayout>

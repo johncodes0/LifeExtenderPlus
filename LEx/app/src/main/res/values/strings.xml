@@ -74,4 +74,7 @@
 
     <string name="pref_title_vibrate">Vibrate</string>
     <string name="title_activity_maps_tab">Map</string>
+    <string name="current">Current:</string>
+    <string name="goal_target">Goal Target:</string>
+    <string name="name_of_goal">Name of Goal:</string>
 </resources>
