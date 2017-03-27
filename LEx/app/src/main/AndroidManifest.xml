@@ -42,7 +42,8 @@
 
         <activity
             android:name=".MapsTab"
-            android:label="@string/title_activity_maps_tab"></activity>
+            android:label="@string/title_activity_maps_tab" />
+        <activity android:name=".AddingGoals"></activity>
     </application>
 
 </manifest>

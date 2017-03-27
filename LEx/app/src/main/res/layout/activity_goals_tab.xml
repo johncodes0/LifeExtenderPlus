@@ -6,4 +6,31 @@
     android:layout_height="match_parent"
     tools:context="se2017.lex.GoalsTab">
 
+    <ImageButton
+        android:id="@+id/ibAchievements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/trophyicon"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/ibAddGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addnewgoal"
+        app:srcCompat="@mipmap/addicon"
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Goals"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="30dp" />
+
 </android.support.constraint.ConstraintLayout>
