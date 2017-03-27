@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/homeicon"
+        android:onClick="gotoHome"
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/homeicon"
+
+        />
+
+    <Button
+        android:id="@+id/statisticsicon"
+        android:onClick="gotoStats"
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/homeicon"
+        android:background="@drawable/statisticsicon"
+        />
+
+    <Button
+        android:id="@+id/goalsicon"
+        android:onClick="gotoGoals"
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/statisticsicon"
+        android:background="@drawable/goalsicon"
+        />
+
+    <Button
+        android:id="@+id/locationsicon"
+        android:onClick="gotoMaps"
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/goalsicon"
+        android:background="@drawable/locationsicon"
+        />
+
+    <Button
+        android:id="@+id/settingsicon"
+        android:onClick="gotoSettings"
+        android:layout_width="76dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/locationsicon"
+        android:background="@drawable/settingsicon"
+        />
+
+</RelativeLayout>

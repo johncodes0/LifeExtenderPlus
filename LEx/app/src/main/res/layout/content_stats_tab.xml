@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="se2017.lex.StatsTab">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif"
+        android:lineSpacingExtra="24sp"
+        android:text="Statistics"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/tv_gymtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_marginTop="63dp"
+        android:layout_toStartOf="@+id/tv_title"
+        android:text="Time at Gym"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_HI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <ImageButton
+        android:id="@+id/btn_calcRunTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_calcGymTime"
+        android:layout_below="@+id/btn_calcGymTime"
+        app:srcCompat="@mipmap/statsicon" />
+
+    <ImageButton
+        android:id="@+id/btn_calcWalkTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_calcRunTime"
+        android:layout_below="@+id/btn_calcRunTime"
+        app:srcCompat="@mipmap/statsicon" />
+
+    <ImageButton
+        android:id="@+id/btn_calcGymTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progressBar"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="38dp"
+        android:layout_toEndOf="@+id/tv_title"
+        app:srcCompat="@mipmap/statsicon" />
+
+    <TextView
+        android:id="@+id/tv_run"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_gymtime"
+        android:layout_below="@+id/btn_calcGymTime"
+        android:layout_marginTop="18dp"
+        android:text="Running"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tv_run"
+        android:layout_below="@+id/btn_calcRunTime"
+        android:layout_marginTop="11dp"
+        android:text="Walking"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_healthindex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_run"
+        android:layout_below="@+id/btn_calcWalkTime"
+        android:layout_marginTop="15dp"
+        android:text="Health Index"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/btn_HIoutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_calcWalkTime"
+        android:layout_below="@+id/btn_calcWalkTime"
+        android:onClick="calculateHI"
+        app:srcCompat="@mipmap/statsicon" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_HI"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:max="600"
+        android:progress="660"
+        android:visibility="invisible" />
+
+    <fragment
+        android:id="@+id/fragment3"
+        android:name="se2017.lex.bottomSectionFrag"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        tools:layout="@layout/bottom_frag"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
