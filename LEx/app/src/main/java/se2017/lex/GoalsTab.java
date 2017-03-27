@@ -28,16 +28,10 @@ public class GoalsTab extends AppCompatActivity {
             if(Goals[i] != null)
             {
                 TextView ListGoal = new TextView(this);
-                ListGoal.setText("  " +  (i+1) + "). " + Goals[i].n + "              ");
+                ListGoal.setText("  " +  (i+1) + "). " + Goals[i].n + "              " + Goals[i].c + " / " + Goals[i].t);
                 ListGoal.setTextSize(20);
                 ListGoal.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
                 ((LinearLayout) linearLayout).addView(ListGoal);
-
-                TextView GoalProgress = new TextView(this);
-                GoalProgress.setText("       " + Goals[i].c + " / " + Goals[i].t);
-                GoalProgress.setTextSize(20);
-                GoalProgress.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
-                ((LinearLayout) linearLayout).addView(GoalProgress);
 
                 ProgressBar GProgressBar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
                 GProgressBar.setMax(Goals[i].t);
