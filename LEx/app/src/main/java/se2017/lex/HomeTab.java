@@ -19,6 +19,7 @@ import android.webkit.WebSettings;
 public class HomeTab extends AppCompatActivity {
 
 
+    //On opening the HomeTab, display the user's Google Calendar site to show their schedule
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +32,7 @@ public class HomeTab extends AppCompatActivity {
     }
 
 
-    //Fragment Links
+    //Fragment Links for Tab Switcher
     public void gotoHome(View v) {
         Intent toHome = new Intent(this, HomeTab.class);
         startActivity(toHome);

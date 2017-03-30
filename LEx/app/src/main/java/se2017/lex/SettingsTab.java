@@ -20,34 +20,44 @@ public class SettingsTab extends AppCompatActivity {
         setContentView(R.layout.activity_settings_tab);
     }
 
+<<<<<<< HEAD
     /**
      * Test method to check Health Index algorithm
      *
      *
      *
      */
+=======
+    //WORK IN PROGRESS - THIS IS NOT THE FINAL CONTENTS OF THE SETTINGS TAB
+    //The settings tab will allow the user to edit their preferences and personalize their usage
+    //of the LifeExtender+ application.
+
+    //Currently, what the Settings Tab allows users to do is enter information to test the
+    //health index calculation formula on the Stats Tab.
+>>>>>>> f1bfc2b2b341500f99729ad5377da18201f5de11
 
     public void confirmGoal(View v) {
-        //Get the inputs
+        //Get the inputs entered by the user and store them into variables
         EditText currentHI = (EditText) findViewById(R.id.tfcurrentind);
         EditText HITime = (EditText) findViewById(R.id.tfhitime);
         EditText LITime = (EditText) findViewById(R.id.tflitime);
 
-        //Process data
+        //Process data by storing the variables as integers for usage in calculations
         int cur = Integer.valueOf(currentHI.getText().toString());
         int hi = Integer.valueOf(HITime.getText().toString());
         int li = Integer.valueOf(LITime.getText().toString());
 
+        //Store the processed data in a Java Object
         StatsTab.HealthInfo.currentHI = cur;
         StatsTab.HealthInfo.HITime = hi;
         StatsTab.HealthInfo.LITime = li;
 
-
+        //After confirming the entered data, return to the Stats Tab to view the updated result
         Intent toStats = new Intent(this, StatsTab.class);
         startActivity(toStats);
     }
 
-    //Fragment Links
+    //Fragment Links for Tab Switcher
     public void gotoHome(View v) {
         Intent toHome = new Intent(this, HomeTab.class);
         startActivity(toHome);
