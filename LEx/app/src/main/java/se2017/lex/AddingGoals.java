@@ -16,11 +16,13 @@ public class AddingGoals extends AppCompatActivity {
         setContentView(R.layout.activity_adding_goals);
     }
 
+    //On clicking the cancel button, return to the Goals Tab without saving any entries
     public void cancel(View v){
         Intent newGoal = new Intent (this, GoalsTab.class);
         startActivity(newGoal);
     }
 
+    //On click, read entries from the user, save them to variables
     public void confirmGoal(View v) {
         //Get the inputs
         EditText goalName = (EditText) findViewById(R.id.tfgoalname);
@@ -32,8 +34,10 @@ public class AddingGoals extends AppCompatActivity {
         int targ = Integer.valueOf(goalTarget.getText().toString());
         String name = String.valueOf(goalName.getText());
 
+        //Create a new Goal Object (java class) to store goal info entered by the user
         GoalObjects NewG = new GoalObjects(cur, targ, name);
 
+        //Store the Goal into an array to save the goal
         for (int i = 0; i < GoalsTab.Goals.length; i++) {
             if(GoalsTab.Goals[i] == null) {
                 GoalsTab.Goals[i] = NewG;
@@ -41,6 +45,7 @@ public class AddingGoals extends AppCompatActivity {
             }
         }
 
+        //Return to the Goals Tab after adding the goal
         Intent toGoals = new Intent(this, GoalsTab.class);
         startActivity(toGoals);
 
