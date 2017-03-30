@@ -20,21 +20,12 @@ public class SettingsTab extends AppCompatActivity {
         setContentView(R.layout.activity_settings_tab);
     }
 
-<<<<<<< HEAD
     /**
      * Test method to check Health Index algorithm
      *
      *
      *
      */
-=======
-    //WORK IN PROGRESS - THIS IS NOT THE FINAL CONTENTS OF THE SETTINGS TAB
-    //The settings tab will allow the user to edit their preferences and personalize their usage
-    //of the LifeExtender+ application.
-
-    //Currently, what the Settings Tab allows users to do is enter information to test the
-    //health index calculation formula on the Stats Tab.
->>>>>>> f1bfc2b2b341500f99729ad5377da18201f5de11
 
     public void confirmGoal(View v) {
         //Get the inputs entered by the user and store them into variables
