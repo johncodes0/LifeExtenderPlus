@@ -67,7 +67,7 @@ public class StatsTab extends AppCompatActivity {
 
 
 
-    //Fragment Links
+    //Fragment Links for tab switcher
     public void gotoHome(View v) {
         Intent toHome = new Intent(this, HomeTab.class);
         startActivity(toHome);

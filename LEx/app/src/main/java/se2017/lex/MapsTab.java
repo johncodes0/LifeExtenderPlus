@@ -80,6 +80,8 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     Marker mCurrLocationMarker;
     LocationRequest mLocationRequest;
 
+
+    //All of the code used to get the Google Maps screen to display
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

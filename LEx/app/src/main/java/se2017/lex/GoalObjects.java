@@ -2,6 +2,7 @@ package se2017.lex;
 
 /**
  * Created by Kevin on 3/26/2017.
+ * Stores information about goals as class objects
  */
 
 public class GoalObjects {
