@@ -3,9 +3,16 @@ package se2017.lex;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.test.suitebuilder.annotation.Suppress;
 import android.view.View;
 import android.widget.EditText;
 
+
+/**
+ * This class allows for goals to be created.
+ * It is referenced from the GoalsTab class.
+ *
+ */
 
 
 public class AddingGoals extends AppCompatActivity {
@@ -16,13 +23,13 @@ public class AddingGoals extends AppCompatActivity {
         setContentView(R.layout.activity_adding_goals);
     }
 
-    //On clicking the cancel button, return to the Goals Tab without saving any entries
+    /** On clicking the cancel button, return to the Goals Tab without saving any entries */
     public void cancel(View v){
         Intent newGoal = new Intent (this, GoalsTab.class);
         startActivity(newGoal);
     }
 
-    //On click, read entries from the user, save them to variables
+    /** On click, read entries from the user, save them to variables */
     public void confirmGoal(View v) {
         //Get the inputs
         EditText goalName = (EditText) findViewById(R.id.tfgoalname);

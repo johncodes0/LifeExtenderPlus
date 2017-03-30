@@ -13,6 +13,14 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+
+/**
+ * This class allows visibility of goals and interacts with AddingGoals class.
+ *
+ *
+ */
+
+
 public class GoalsTab extends AppCompatActivity {
 
     public static GoalObjects[] Goals = new GoalObjects[5];

@@ -8,6 +8,14 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.webkit.WebSettings;
 
+/**
+ * This class interacts with Google Calendar API.
+ *
+ *
+ *
+ */
+
+
 public class HomeTab extends AppCompatActivity {
 
 

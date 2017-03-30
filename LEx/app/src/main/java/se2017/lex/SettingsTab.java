@@ -6,6 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+/**
+ * This class changes applicable settings that has parameters that affects the backend calendar code.
+ *
+ *
+ */
+
 public class SettingsTab extends AppCompatActivity {
 
     @Override
@@ -13,6 +19,13 @@ public class SettingsTab extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_tab);
     }
+
+    /**
+     * Test method to check Health Index algorithm
+     *
+     *
+     *
+     */
 
     public void confirmGoal(View v) {
         //Get the inputs

@@ -8,6 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.content.Intent;
 
+/**
+ * This class is referenced by all tabs, functioning as the visible tab selector on the bottom of the app.
+ */
+
+
 public class bottomSectionFrag extends Fragment {
 
     @Override

@@ -1,8 +1,9 @@
 package se2017.lex;
 
 /**
- * Created by Kevin on 3/27/2017.
+ * This is an object that contains data about the HealthIndex.
  */
+
 
 public class IndexObjects {
     public int currentHI;

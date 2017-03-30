@@ -1,7 +1,7 @@
 package se2017.lex;
 
 /**
- * Created by Kevin on 3/26/2017.
+ * This is an object that contains data about Goals.
  */
 
 public class GoalObjects {
