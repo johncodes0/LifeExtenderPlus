@@ -13,8 +13,10 @@ import android.view.MenuItem;
 
 public class StatsTab extends AppCompatActivity {
 
+    //Creates a class object HealthInfo that stores the data needed to calculate the health index
     public static IndexObjects HealthInfo = new IndexObjects(200, 60, 60);
 
+    //On opening the Stats Tab, calculate and display the Health Index
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,7 @@ public class StatsTab extends AppCompatActivity {
         calculateHI();
     }
 
+    //Drafted formula to calculate the Health Index
     protected void calculateHI () {
         TextView output = (TextView) findViewById(R.id.tv_HI);
 
@@ -43,6 +46,7 @@ public class StatsTab extends AppCompatActivity {
                 H_n = H_n - 100;
         }
 
+        //Displaying the Health Index
         String formattedHI = String.format("%,d",H_n);
         output.setText("Health Index: " + formattedHI);
 
