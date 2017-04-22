@@ -80,4 +80,9 @@
     <string name="goalname">Name of Goal:</string>
     <string name="goalsheading">Goals</string>
     <string name="title_activity_stats_tab">StatsTab</string>
+    <string name="EditCurrent">Current:</string>
+    <string name="EditGoal">Goal:</string>
+    <string name="EditNew">New:</string>
+    <string name="EditGoalName">TextView</string>
+    <string name="EditCurrVal">TextView</string>
 </resources>

@@ -11,10 +11,7 @@ import android.widget.TextView;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.ListView;
-import android.widget.ListAdapter;
-import android.widget.ArrayAdapter;
-import android.widget.AdapterView;
+
 
 
 /**
@@ -27,14 +24,14 @@ import android.widget.AdapterView;
 public class GoalsTab extends AppCompatActivity {
 
     //Creates an array to store and save the user's goals
-    public static GoalObjects[] Goals = new GoalObjects[5];
-
+    public static GoalObjects[] Goals = new GoalObjects[10];
+    public static GoalObjects[] CompleteGoals = new GoalObjects[100];
+    public static int targetGoal;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goals_tab);
-
 
         View linearLayout = findViewById(R.id.info);
 
@@ -45,7 +42,7 @@ public class GoalsTab extends AppCompatActivity {
 
                 //Text View to display name of goal and give a fraction on the completion progress of the goal
                 TextView ListGoal = new TextView(this);
-                ListGoal.setText("  " +  (i+1) + "). " + Goals[i].n + "              " + Goals[i].c + " / " + Goals[i].t);
+                ListGoal.setText("  " + Goals[i].n + "              " + Goals[i].c + " / " + Goals[i].t);
                 ListGoal.setTextSize(20);
                 ListGoal.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
                 ((LinearLayout) linearLayout).addView(ListGoal);
@@ -86,23 +83,45 @@ public class GoalsTab extends AppCompatActivity {
                 if (Goals[i].c < Goals[i].t) {
                     //Display a button for editing the goal
                     Button EditGoal = new Button(this);
-                    EditGoal.setId(i * 2);
-                    int editbID = EditGoal.getId();
+                    EditGoal.setId(i);
+                    final int editbID = EditGoal.getId();
                     EditGoal.setText("Edit");
-
-
-
+                    final Intent toEditGoals = new Intent(this, EditGoals.class);
+                    EditGoal.setOnClickListener(new View.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(View v)
+                        {
+                            targetGoal = editbID;
+                            startActivity(toEditGoals);
+                        }
+                    });
                     ((LinearLayout) linearLayout).addView(EditGoal);
                 } else {
                     //Display a button for finishing the goal
-                    Button EditGoal = new Button(this);
-                    EditGoal.setId(i * 2);
-                    int editbID = EditGoal.getId();
-                    EditGoal.setText("Complete");
-
-
-
-                    ((LinearLayout) linearLayout).addView(EditGoal);
+                    Button CompleteGoal = new Button(this);
+                    CompleteGoal.setId(i);
+                    final int completeID = CompleteGoal.getId();
+                    CompleteGoal.setText("Complete");
+                    CompleteGoal.setOnClickListener(new View.OnClickListener()
+                    {
+                        @Override
+                        public void onClick(View v)
+                        {
+                            //Create a new Goal Object (java class) to store goal info entered by the user
+                            GoalObjects NewG = new GoalObjects(Goals[completeID].c, Goals[completeID].t, Goals[completeID].n);
+                            //Copy Over a Goals Object into the completed goals array
+                            for (int j = 0; j < CompleteGoals.length; j++) {
+                                if(CompleteGoals[j] == null) {
+                                    CompleteGoals[j] = NewG;
+                                    break;
+                                }
+                            }
+                            Goals[completeID] = null;
+                            startActivity(toGoals);
+                        }
+                    });
+                    ((LinearLayout) linearLayout).addView(CompleteGoal);
 
                 }
             }
@@ -118,6 +137,11 @@ public class GoalsTab extends AppCompatActivity {
     public void makeNewGoal(View v){
         Intent newGoal = new Intent (this, AddingGoals.class);
         startActivity(newGoal);
+    }
+
+    public void viewAchievements (View v){
+        Intent toAchievements = new Intent (this, AchievedGoals.class);
+        startActivity(toAchievements);
     }
 
     //Fragment Links for tab switcher
