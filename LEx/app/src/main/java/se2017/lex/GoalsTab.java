@@ -21,6 +21,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import static java.lang.Thread.currentThread;
+import static java.lang.Thread.sleep;
+
 
 /**
  * This class allows visibility of goals and interacts with AddingGoals class.
@@ -35,7 +38,6 @@ public class GoalsTab extends AppCompatActivity {
     public static GoalObjects[] Goals = new GoalObjects[10];
     public static GoalObjects[] CompleteGoals = new GoalObjects[100];
     public static int targetGoal;
-    public static GoalObjects[] Goals = new GoalObjects[5];
     private DatabaseReference fDatabase;
     String userid ="jariy";
 
@@ -44,11 +46,11 @@ public class GoalsTab extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goals_tab);
-
+        //Load data from Database
         fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/Goals");
 
         fDatabase.addValueEventListener(new ValueEventListener() {
-
+            @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
@@ -76,7 +78,7 @@ public class GoalsTab extends AppCompatActivity {
 
         //For loop to display all of the goals saved in the array as a list on the goals tab page
         for(int i = 0; i < Goals.length; i++) {
-            if(Goals[i] != null)
+            if(Goals[i] != null && !Goals[i].com)
             {
 
                 //Text View to display name of goal and give a fraction on the completion progress of the goal
@@ -148,7 +150,9 @@ public class GoalsTab extends AppCompatActivity {
                         public void onClick(View v)
                         {
                             //Create a new Goal Object (java class) to store goal info entered by the user
-                            GoalObjects NewG = new GoalObjects(Goals[completeID].c, Goals[completeID].t, Goals[completeID].n);
+                            GoalObjects NewG = new GoalObjects(Goals[completeID].c, Goals[completeID].t, Goals[completeID].n, Goals[completeID].k,true);
+                            //Change Goal in database
+                            fDatabase.child(NewG.k).setValue(NewG);
                             //Copy Over a Goals Object into the completed goals array
                             for (int j = 0; j < CompleteGoals.length; j++) {
                                 if(CompleteGoals[j] == null) {

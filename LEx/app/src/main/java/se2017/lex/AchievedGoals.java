@@ -3,6 +3,7 @@ package se2017.lex;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -10,14 +11,50 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 public class AchievedGoals extends AppCompatActivity {
-
+    private DatabaseReference fDatabase;
+    String userid ="jariy";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achieved_goals);
+        fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/Goals");
+        fDatabase.addValueEventListener(new ValueEventListener() {
+        GoalObjects temp;
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                int i = 0;
+
+                for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    temp = child.getValue(GoalObjects.class);
+                    if(i<(GoalsTab.CompleteGoals.length) && temp.com) {
+                        GoalsTab.CompleteGoals[i] = temp;
+                        i++;
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("Failed to read value.", error.toException());
+            }
+        });
+
+
+
+
+
+
 
         View linLayout = findViewById(R.id.moreinfo);
 

@@ -7,9 +7,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.EditText;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 public class EditGoals extends AppCompatActivity {
-
+    private DatabaseReference mDatabase;
+    public String userid = "jariy";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,12 @@ public class EditGoals extends AppCompatActivity {
         TextView goalProgress = (TextView) findViewById(R.id.goalProgress);
         String p = String.valueOf(GoalsTab.Goals[GoalsTab.targetGoal].c);
         goalProgress.setText(p);
+        //Opening Database
+        mDatabase = FirebaseDatabase.getInstance().getReference(userid+"/Goals");
+
+
+
+
     }
 
     /** On clicking the cancel button, return to the Goals Tab without saving any entries */
@@ -42,6 +52,10 @@ public class EditGoals extends AppCompatActivity {
 
         //Overwrite old progress with new
         GoalsTab.Goals[GoalsTab.targetGoal].c = np;
+        //Overwrite old goal in database
+        mDatabase.child(GoalsTab.Goals[GoalsTab.targetGoal].k).setValue(GoalsTab.Goals[GoalsTab.targetGoal]);
+
+
 
         //Return to the Goals Tab after adding the goal
         Intent toGoals = new Intent(this, GoalsTab.class);
