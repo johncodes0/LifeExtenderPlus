@@ -5,6 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+//Imports for notifications
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.support.v7.app.NotificationCompat;
+import android.support.v7.app.ActionBarActivity;
+
+
+
 
 /**
  * This class changes applicable settings that has parameters that affects the backend calendar code.
@@ -14,10 +22,38 @@ import android.widget.EditText;
 
 public class SettingsTab extends AppCompatActivity {
 
+
+
+    NotificationCompat.Builder notif;
+    private static final int uniqueID = 481516;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_tab);
+
+
+        notif = new NotificationCompat.Builder(this);
+        notif.setAutoCancel(true);
+
+
+    }
+
+    public void sendNotification(View view){
+        notif.setSmallIcon(R.drawable.app_logo);
+        notif.setTicker("Ticker");
+        notif.setWhen(System.currentTimeMillis());
+        notif.setContentTitle("LifeExtender+");
+        notif.setContentText("Time to get some exercise!");
+
+        Intent intent = new Intent(this,HomeTab.class);
+//        startActivity(intent);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        notif.setContentIntent(pendingIntent);
+
+        NotificationManager nm =  (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        nm.notify(uniqueID,notif.build());
+
     }
 
 
@@ -40,6 +76,8 @@ public class SettingsTab extends AppCompatActivity {
     public void changeNotificationsSettings(View v){
         Intent changeN = new Intent(this,ChangeNotifcations.class);
         startActivity(changeN);
+        //TESTING THE NOTIFICATION
+        sendNotification(null);
     }
 
     public void changeLocationGPSSettings(View v){
