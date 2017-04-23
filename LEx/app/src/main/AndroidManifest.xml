@@ -51,7 +51,8 @@
         <activity android:name=".ChangeNotifcations" />
         <activity android:name=".ChangeLocationGPS" />
         <activity android:name=".ChangeCalendar" />
-        <activity android:name=".ChangeProfile"></activity>
+        <activity android:name=".ChangeProfile" />
+        <activity android:name=".SettingsObject"></activity>
     </application>
 
 </manifest>
