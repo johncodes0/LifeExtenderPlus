@@ -1,10 +1,12 @@
 package se2017.lex;
 
 
+import android.provider.ContactsContract;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -12,6 +14,12 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 /**
@@ -27,11 +35,42 @@ public class GoalsTab extends AppCompatActivity {
     public static GoalObjects[] Goals = new GoalObjects[10];
     public static GoalObjects[] CompleteGoals = new GoalObjects[100];
     public static int targetGoal;
+    public static GoalObjects[] Goals = new GoalObjects[5];
+    private DatabaseReference fDatabase;
+    String userid ="jariy";
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goals_tab);
+
+        fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/Goals");
+
+        fDatabase.addValueEventListener(new ValueEventListener() {
+
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+              int i = 0;
+
+                for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    if(i<(Goals.length)) {
+                        Goals[i] = child.getValue(GoalObjects.class);
+                        i++;
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("Failed to read value.", error.toException());
+            }
+        });
+
+
 
         View linearLayout = findViewById(R.id.info);
 

@@ -5,15 +5,16 @@ package se2017.lex;
  *
  *
  */
-
+import java.util.HashMap;
+import java.util.Map;
 public class GoalObjects {
     public int c;
     public int t;
     public String n;
-
-    public GoalObjects()
+    public Map<String, Boolean> stars = new HashMap<>();
+    private GoalObjects()
     {
-        super();
+    super();
     }
 
     public GoalObjects(int cur, int tar, String nam)
@@ -22,6 +23,14 @@ public class GoalObjects {
         this.c = cur;
         this.t = tar;
         this.n = nam;
+    }
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("current", c);
+        result.put("target", t);
+        result.put("name", n);
+
+        return result;
     }
 
     @Override

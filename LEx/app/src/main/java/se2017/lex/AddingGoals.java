@@ -7,6 +7,12 @@ import android.test.suitebuilder.annotation.Suppress;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Map;
+
 
 /**
  * This class allows for goals to be created.
@@ -16,11 +22,13 @@ import android.widget.EditText;
 
 
 public class AddingGoals extends AppCompatActivity {
-
-    @Override
+    private DatabaseReference mDatabase;
+    public String userid = "jariy";
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adding_goals);
+        mDatabase = FirebaseDatabase.getInstance().getReference(userid+"/Goals");
+
     }
 
     /** On clicking the cancel button, return to the Goals Tab without saving any entries */
@@ -41,16 +49,17 @@ public class AddingGoals extends AppCompatActivity {
         int targ = Integer.valueOf(goalTarget.getText().toString());
         String name = String.valueOf(goalName.getText());
 
+
+
+
+
+
         //Create a new Goal Object (java class) to store goal info entered by the user
         GoalObjects NewG = new GoalObjects(cur, targ, name);
-
+        Map<String, Object> postValues = NewG.toMap();
+        String key = mDatabase.push().getKey();
+        mDatabase.child(key).setValue(NewG);
         //Store the Goal into an array to save the goal
-        for (int i = 0; i < GoalsTab.Goals.length; i++) {
-            if(GoalsTab.Goals[i] == null) {
-                GoalsTab.Goals[i] = NewG;
-                break;
-            }
-        }
 
         //Return to the Goals Tab after adding the goal
         Intent toGoals = new Intent(this, GoalsTab.class);
