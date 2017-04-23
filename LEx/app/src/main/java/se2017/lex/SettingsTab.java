@@ -5,6 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+//Imports for notifications
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.support.v7.app.NotificationCompat;
+import android.support.v7.app.ActionBarActivity;
+
+
+
 
 /**
  * This class changes applicable settings that has parameters that affects the backend calendar code.
@@ -14,10 +22,20 @@ import android.widget.EditText;
 
 public class SettingsTab extends AppCompatActivity {
 
+
+
+    NotificationCompat.Builder notif;
+    private static final int uniqueID = 481516;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings_tab);
+
+
+        notif = new NotificationCompat.Builder(this);
+        notif.setAutoCancel(true);
+
     }
 
 
