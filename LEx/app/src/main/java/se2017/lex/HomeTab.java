@@ -472,7 +472,7 @@ public class HomeTab extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_home_tab);
+        setContentView(R.layout.activity_home_tab);
 //        WebView myWebView = (WebView) findViewById(R.id.calenderview);
 //        myWebView.loadUrl("https://calendar.google.com/");
 //        myWebView.setWebViewClient(new WebViewClient());
