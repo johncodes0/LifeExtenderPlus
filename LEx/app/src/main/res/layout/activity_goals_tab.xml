@@ -57,13 +57,9 @@
         android:name="se2017.lex.bottomSectionFrag"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout="@layout/bottom_frag" />
+        tools:layout="@layout/bottom_frag"
+        tools:layout_editor_absoluteY="451dp"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ScrollView
         android:layout_width="354dp"

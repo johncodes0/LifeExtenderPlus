@@ -47,7 +47,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SettingsTab" />
         <activity android:name=".EditGoals" />
-        <activity android:name=".AchievedGoals"></activity>
+        <activity android:name=".AchievedGoals" />
+        <activity android:name=".ChangeNotifcations" />
+        <activity android:name=".ChangeLocationGPS" />
+        <activity android:name=".ChangeCalendar" />
+        <activity android:name=".ChangeProfile"></activity>
     </application>
 
 </manifest>
