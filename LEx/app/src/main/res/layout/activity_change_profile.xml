@@ -25,16 +25,17 @@
         android:id="@+id/imageButton"
         android:layout_width="46dp"
         android:layout_height="47dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="25dp"
+        android:onClick="ret"
         android:scaleX=".75"
         android:scaleY=".75"
-        app:srcCompat="@drawable/left_arrow"
-        app:layout_constraintRight_toLeftOf="@+id/profileTitle"
-        android:layout_marginRight="21dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/profileTitle"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="25dp" />
+        app:srcCompat="@drawable/left_arrow" />
 
     <TextView
         android:id="@+id/logout"

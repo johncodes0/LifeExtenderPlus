@@ -12,8 +12,10 @@
         android:layout_height="wrap_content"
         android:onClick="changeLocationGPSSettings"
         app:srcCompat="@drawable/right_arrow_small"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="125dp" />
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="51dp"
+        app:layout_constraintTop_toBottomOf="@+id/notificationsButton" />
 
     <ImageButton
         android:id="@+id/CalendarButton"
@@ -21,8 +23,13 @@
         android:layout_height="wrap_content"
         android:onClick="changeCalendarSettings"
         app:srcCompat="@drawable/right_arrow_small"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="173dp" />
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_Calendar"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="54dp"
+        app:layout_constraintTop_toBottomOf="@+id/LocationsGPSButton" />
 
     <ImageButton
         android:id="@+id/ProfileButton"
@@ -30,22 +37,32 @@
         android:layout_height="wrap_content"
         android:onClick="changeProfileSettings"
         app:srcCompat="@drawable/right_arrow_small"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="230dp" />
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/tv_profile"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        android:layout_marginTop="58dp"
+        app:layout_constraintTop_toBottomOf="@+id/CalendarButton"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_frag"
+        app:layout_constraintVertical_bias="0.278" />
 
     <TextView
         android:id="@+id/settingsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="158dp"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginRight="8dp"
         android:text="Settings"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="24sp"
+        app:layout_constraintHorizontal_bias="0.513"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="8dp" />
 
     <TextView
         android:id="@+id/tv_notifications"
@@ -53,13 +70,16 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="88dp"
         android:text="Notifications"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toLeftOf="@+id/notificationsButton"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.056" />
 
     <TextView
         android:id="@+id/tv_locationGPS"
@@ -67,27 +87,29 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="58dp"
         android:text="Location/GPS"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_notifications"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        app:layout_constraintRight_toLeftOf="@+id/LocationsGPSButton"
+        android:layout_marginRight="8dp"
+        app:layout_constraintHorizontal_bias="0.065" />
 
     <TextView
         android:id="@+id/tv_Calendar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="27dp"
         android:text="Calendar"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_locationGPS"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="69dp" />
 
     <TextView
         android:id="@+id/tv_profile"
@@ -96,8 +118,13 @@
         android:text="Profile"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="230dp" />
+        android:layout_marginLeft="27dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="65dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Calendar"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_frag"
+        app:layout_constraintVertical_bias="0.32" />
 
     <fragment
         android:id="@+id/bottom_frag"
@@ -116,7 +143,9 @@
         android:layout_height="wrap_content"
         android:onClick="changeNotificationsSettings"
         app:srcCompat="@drawable/right_arrow_small"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="74dp" />
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="74dp" />
 
 </android.support.constraint.ConstraintLayout>

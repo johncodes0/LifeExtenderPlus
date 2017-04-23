@@ -64,11 +64,12 @@
         android:id="@+id/imageButton"
         android:layout_width="51dp"
         android:layout_height="46dp"
+        android:layout_marginRight="20dp"
+        android:onClick="ret"
         android:scaleX=".75"
         android:scaleY=".75"
-        app:srcCompat="@drawable/left_arrow"
-        tools:layout_editor_absoluteY="29dp"
         app:layout_constraintRight_toLeftOf="@+id/calendarTitle"
-        android:layout_marginRight="20dp" />
+        app:srcCompat="@drawable/left_arrow"
+        tools:layout_editor_absoluteY="29dp" />
 
 </android.support.constraint.ConstraintLayout>
