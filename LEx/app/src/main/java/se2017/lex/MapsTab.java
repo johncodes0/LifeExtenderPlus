@@ -59,6 +59,8 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.maps.GoogleMap.OnMapLongClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -69,6 +71,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.text.DateFormat;
+import java.util.Date;
 /**
  * This class interacts with Google Maps API pulling GPS data and
  *
@@ -78,21 +82,39 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
-        LocationListener {
+        LocationListener, OnMapLongClickListener, OnMapClickListener {
 
     private GoogleMap mMap;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
     Marker mCurrLocationMarker;
     LocationRequest mLocationRequest;
+    Marker mAPLocationMarker;
+    private static long pollingRate = 6000;
+
+    //public void getPollingRate()
+    //{
+    //  pollingRate = SettingsTab.getPollingRate();
+    //}
+
+
+    protected void createLocationRequest() {
+        //getPollingRate();
+        mLocationRequest = new LocationRequest();
+        mLocationRequest.setInterval(pollingRate);
+        mLocationRequest.setFastestInterval(pollingRate);
+        mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+    }
 
 
     //All of the code used to get the Google Maps screen to display
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps_tab);
 
+        createLocationRequest();
+
+        setContentView(R.layout.activity_maps_tab);
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
         }
@@ -125,11 +147,13 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
                 buildGoogleApiClient();
                 mMap.setMyLocationEnabled(true);
             }
-        }
-        else {
+        } else {
             buildGoogleApiClient();
             mMap.setMyLocationEnabled(true);
         }
+
+        mMap.setOnMapClickListener(this);
+        mMap.setOnMapLongClickListener(this);
     }
 
     protected synchronized void buildGoogleApiClient() {
@@ -140,6 +164,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
                 .build();
         mGoogleApiClient.connect();
     }
+
 
     @Override
     public void onConnected(Bundle bundle) {
@@ -165,26 +190,30 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     public void onLocationChanged(Location location) {
 
         mLastLocation = location;
-        if (mCurrLocationMarker != null) {
-            mCurrLocationMarker.remove();
-        }
+        //if (mCurrLocationMarker != null) {
+        //  mCurrLocationMarker.remove();
+        //}
+
 
         //Place current location marker
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
         markerOptions.title("Current Position");
+        long atTime = location.getTime();
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
         mCurrLocationMarker = mMap.addMarker(markerOptions);
+        mCurrLocationMarker.setTitle(DateFormat.getTimeInstance().format(new Date(atTime)));
+
 
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
 
         //stop location updates
-        if (mGoogleApiClient != null) {
-            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
-        }
+        // if (mGoogleApiClient != null) {
+        //   LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+        //}
 
     }
 
@@ -193,8 +222,26 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
     }
 
+    @Override
+    public void onMapClick(LatLng point) {
+
+    }
+
+    @Override
+    public void onMapLongClick(LatLng point) {
+        LatLng latLng = point;
+        MarkerOptions markerOptions = new MarkerOptions();
+        markerOptions.position(latLng);
+        markerOptions.title("Active Period Location");
+        markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+        mAPLocationMarker = mMap.addMarker(markerOptions);
+
+    }
+
+
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
-    public boolean checkLocationPermission(){
+
+    public boolean checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
