@@ -6,4 +6,58 @@
     android:layout_height="match_parent"
     tools:context="se2017.lex.ChangeCalendar">
 
+    <TextView
+        android:id="@+id/calendarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calendar Settings"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/wakeUpTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wake-Up Time"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <TextView
+        android:id="@+id/travelTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Travel Time"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="158dp" />
+
+    <TextView
+        android:id="@+id/sleepTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleep Time"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="218dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="58dp"
+        android:layout_height="51dp"
+        android:scaleX=".75"
+        android:scaleY=".75"
+        app:srcCompat="@drawable/left_arrow"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="16dp" />
+
 </android.support.constraint.ConstraintLayout>

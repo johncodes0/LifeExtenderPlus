@@ -14,6 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:text="@string/goal_target"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
@@ -27,6 +28,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:text="@string/current"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
@@ -41,6 +43,7 @@
         android:layout_marginTop="127dp"
         android:text="@string/goalname"
         android:textAlignment="center"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -112,5 +115,15 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/cancelicon" />
+
+    <TextView
+        android:id="@+id/newGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Goal"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="45dp" />
 
 </android.support.constraint.ConstraintLayout>

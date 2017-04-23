@@ -6,4 +6,24 @@
     android:layout_height="match_parent"
     tools:context="se2017.lex.ChangeProfile">
 
+    <TextView
+        android:id="@+id/profileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile Settings"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="58dp"
+        android:layout_height="51dp"
+        android:scaleX=".75"
+        android:scaleY=".75"
+        app:srcCompat="@drawable/left_arrow"
+        tools:layout_editor_absoluteX="35dp"
+        tools:layout_editor_absoluteY="16dp" />
 </android.support.constraint.ConstraintLayout>
