@@ -21,4 +21,19 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintLeft_creator="1" />
 
+    <ScrollView
+        android:layout_width="366dp"
+        android:layout_height="429dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <LinearLayout
+            android:id="@+id/eventList"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp"></LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
