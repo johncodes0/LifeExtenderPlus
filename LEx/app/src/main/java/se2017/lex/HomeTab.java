@@ -469,6 +469,20 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
             }
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
 
 //public class HomeTab extends AppCompatActivity{
