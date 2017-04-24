@@ -523,7 +523,7 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
         }
 
         private boolean overlaps(Event a, Event b){
-            if((a.getEnd().getDateTime().getValue()/86400%365)!=(b.getStart().getDateTime().getValue()/86400%365)){
+            if((a.getEnd().getDateTime().getValue()/(1000*60*60*24)%365)!=(b.getStart().getDateTime().getValue()/(1000*60*60*24)%365)){
                 return false;
             }
 
