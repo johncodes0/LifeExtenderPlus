@@ -54,6 +54,7 @@ public class AddingGoals extends AppCompatActivity {
 
         //Create child location with key
         String key = mDatabase.push().getKey();
+
         //Create a new Goal Object (java class) to store goal info entered by the user
         GoalObjects NewG = new GoalObjects(cur, targ, name,key);
         //Stores the Goal into database

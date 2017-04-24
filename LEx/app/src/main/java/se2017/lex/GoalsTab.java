@@ -111,6 +111,7 @@ public class GoalsTab extends AppCompatActivity {
                     @Override
                     public void onClick(View v)
                     {
+                        fDatabase.child(Goals[delbID].k).removeValue();
                         Goals[delbID] = null;
                         startActivity(toGoals);
                     }

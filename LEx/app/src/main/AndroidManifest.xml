@@ -55,10 +55,13 @@
         <activity android:name=".ChangeLocationGPS" />
         <activity android:name=".ChangeCalendar" />
         <activity android:name=".ChangeProfile" />
-        <activity android:name=".SettingsObject"></activity>
-        <service android:name=".LocationService" android:process=":my_service" />
+        <activity android:name=".SettingsObject" />
 
+        <service
+            android:name=".LocationService"
+            android:process=":my_service" />
 
+        <activity android:name=".AddingEvent"></activity>
     </application>
 
 </manifest>

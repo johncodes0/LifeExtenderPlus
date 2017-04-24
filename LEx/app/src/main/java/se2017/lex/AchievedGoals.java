@@ -17,12 +17,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Arrays;
+
 
 public class AchievedGoals extends AppCompatActivity {
     private DatabaseReference fDatabase;
     String userid ="jariy";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achieved_goals);
         fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/Goals");
