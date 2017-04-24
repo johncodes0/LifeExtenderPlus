@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ap="http://schemas.android.com/apk/res-auto"
+    android:layout_height="200dp"
+    android:layout_width="385dp">
+
+    <com.androidplot.xy.XYPlot
+        android:id="@+id/plot"
+        style="@style/APDefacto.Dark"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        ap:domainTitle="Day"
+        ap:lineLabelRotationBottom="-45"
+        ap:lineLabels="left|bottom"
+        ap:rangeTitle="Health Index"
+        ap:title="Health Index" />
+</LinearLayout>

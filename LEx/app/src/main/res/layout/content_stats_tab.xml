@@ -45,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/btn_calcGymTime"
         android:layout_below="@+id/btn_calcGymTime"
+        android:onClick="viewRGraph"
         app:srcCompat="@mipmap/statsicon" />
 
     <ImageButton
@@ -53,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/btn_calcRunTime"
         android:layout_below="@+id/btn_calcRunTime"
+        android:onClick="viewWGraph"
         app:srcCompat="@mipmap/statsicon" />
 
     <ImageButton
@@ -63,6 +65,16 @@
         android:layout_marginStart="11dp"
         android:layout_marginTop="38dp"
         android:layout_toEndOf="@+id/tv_title"
+        android:onClick="viewGGraph"
+        app:srcCompat="@mipmap/statsicon" />
+
+    <ImageButton
+        android:id="@+id/btn_HIoutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btn_calcWalkTime"
+        android:layout_below="@+id/btn_calcWalkTime"
+        android:onClick="viewHGraph"
         app:srcCompat="@mipmap/statsicon" />
 
     <TextView
@@ -95,14 +107,7 @@
         android:text="Health Index"
         android:textSize="18sp" />
 
-    <ImageButton
-        android:id="@+id/btn_HIoutput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn_calcWalkTime"
-        android:layout_below="@+id/btn_calcWalkTime"
-        android:onClick="calculateHI"
-        app:srcCompat="@mipmap/statsicon" />
+
 
     <ProgressBar
         android:id="@+id/progressBar"

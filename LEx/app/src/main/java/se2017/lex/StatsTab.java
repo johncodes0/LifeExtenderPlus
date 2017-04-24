@@ -34,6 +34,10 @@ public class StatsTab extends AppCompatActivity {
     private DatabaseReference fDatabase;
     String userid = "jariy";
     public IndexObjects HI[] = new IndexObjects[20];
+    public int HIGH[] = new int[20];
+    public int LOW[] = new int[20];
+    public double date[] = new double[20];
+    public int current[] = new int[20];
 
     /**
      * On opening the Stats Tab, calculate and display the Health Index
@@ -67,6 +71,16 @@ public class StatsTab extends AppCompatActivity {
             }
         });
         pushHI();
+
+
+        int counter = 0;
+        while (HI[counter] != null)
+        {
+            HIGH[counter] = HI[counter].HITime;
+            LOW[counter] = HI[counter].LITime;
+            date[counter] = HI[counter].date;
+            current[counter] = HI[counter].currentHI;
+        }
 
 
 
@@ -118,6 +132,30 @@ public class StatsTab extends AppCompatActivity {
         }
         HealthInfo.currentHI = H_n;
 
+    }
+
+    public void viewHGraph(View v)
+    {
+        Intent toGraph = new Intent(this, h_graph.class);
+        startActivity(toGraph);
+    }
+
+    public void viewWGraph(View v)
+    {
+        Intent toGraph = new Intent(this, w_graph.class);
+        startActivity(toGraph);
+    }
+
+    public void viewRGraph(View v)
+    {
+        Intent toGraph = new Intent(this, r_graph.class);
+        startActivity(toGraph);
+    }
+
+    public void viewGGraph(View v)
+    {
+        Intent toGraph = new Intent(this, g_graph.class);
+        startActivity(toGraph);
     }
 
 
