@@ -36,7 +36,6 @@ public class SettingsTab extends AppCompatActivity {
         notif = new NotificationCompat.Builder(this);
         notif.setAutoCancel(true);
 
-
     }
 
 //    public void sendNotification(View view){
