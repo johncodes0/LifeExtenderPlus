@@ -101,6 +101,11 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
         startActivity(toGoals);
     }
 
+
+
+
+
+
     /**
      * Create the main activity.
      *
