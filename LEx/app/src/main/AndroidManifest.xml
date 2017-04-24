@@ -55,6 +55,11 @@
         <activity android:name=".ChangeCalendar" />
         <activity android:name=".ChangeProfile" />
         <activity android:name=".SettingsObject"></activity>
+        <service
+            android:name=".LocationService"
+            android:exported="false"/>
+
+
     </application>
 
 </manifest>
