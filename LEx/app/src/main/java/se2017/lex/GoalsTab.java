@@ -57,6 +57,8 @@ public class GoalsTab extends AppCompatActivity {
               int i = 0;
 
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    while(child.getValue(GoalObjects.class) == null) {
+                    }
                     if(i<(Goals.length)) {
                         Goals[i] = child.getValue(GoalObjects.class);
                         i++;

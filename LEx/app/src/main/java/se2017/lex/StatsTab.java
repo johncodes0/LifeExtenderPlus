@@ -11,7 +11,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.view.Menu;
 import android.view.MenuItem;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * This class displays the HealthIndex while also being responsible for analysis of data.
@@ -30,21 +30,19 @@ import java.util.Date;
 public class StatsTab extends AppCompatActivity {
 
     //Creates a class object HealthInfo that stores the data needed to calculate the health index
-    public static IndexObjects HealthInfo = new IndexObjects(200,60,60);
+    public static IndexObjects HealthInfo = new IndexObjects(210, 40, 30);
     private DatabaseReference fDatabase;
-    String userid ="jariy";
+    String userid = "jariy";
     public IndexObjects HI[] = new IndexObjects[20];
 
-    /** On opening the Stats Tab, calculate and display the Health Index */
+    /**
+     * On opening the Stats Tab, calculate and display the Health Index
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats_tab);
-        fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/HI");
-        String key = fDatabase.push().getKey();
-        fDatabase.child(key).setValue(HealthInfo);
-
-
+        fDatabase = FirebaseDatabase.getInstance().getReference(userid + "/HI");
         fDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -53,9 +51,8 @@ public class StatsTab extends AppCompatActivity {
                 int i = 0;
 
                 for (DataSnapshot child : dataSnapshot.getChildren()) {
-                    if(child.getValue(IndexObjects.class) == null) { break;
-                    }
-                    if(i<(HI.length)) {
+
+                    if (i < HI.length) {
                         HI[i] = child.getValue(IndexObjects.class);
                         i++;
                     }
@@ -69,28 +66,36 @@ public class StatsTab extends AppCompatActivity {
                 Log.w("Failed to read value.", error.toException());
             }
         });
+        pushHI();
+
+
+
 
     }
-    public void pushHI(){
+
+    public void pushHI() {
         Date today = Calendar.getInstance().getTime();
 
         // (2) create a date "formatter" (the date format we want)
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd", Locale.US);
 
         // (3) create a new String using the date format we want
-        String d = formatter.format(today);
-        for(int i =0; i <HI.length; i++) {
-            if(HI[i].date == d) {
+        String d1 = formatter.format(today);
+        double d = Double.parseDouble(d1);
+        for (int i = 0; i < HI.length; i++) {
+            if (HI[i].date == d) {
                 return;
             }
         }
+        calculateHI();
         String key = fDatabase.push().getKey();
         fDatabase.child(key).setValue(HealthInfo);
     }
 
-    /** Drafted formula to calculate the Health Index */
-    protected void calculateHI () {
-        TextView output = (TextView) findViewById(R.id.tv_HI);
+    /**
+     * Drafted formula to calculate the Health Index
+     */
+    public void calculateHI() {
 
         int H_0 = HealthInfo.currentHI; //inital index
         int L = 1; //low intensity multiplier
@@ -105,29 +110,13 @@ public class StatsTab extends AppCompatActivity {
         if (x1 > 30) {
             if (x2 != 0) {
                 H_n = L * x1 + H * x2 + H_nm1;
-            }
-            else
+            } else
                 H_n = H_n - 100;
         }
+        HealthInfo.currentHI = H_n;
 
-        //Displaying the Health Index
-        String formattedHI = String.format("%,d",H_n);
-        output.setText("Health Index: " + formattedHI);
-
-        //initiate button and progress bar
-        ImageButton btn_HIoutput = (ImageButton) findViewById(R.id.btn_HIoutput);
-        final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
-
-        btn_HIoutput.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //call function to calculate health index
-                calculateHI();
-                //second click changes progress bar visibility to "visible"
-                //should be able to check value of HI and set current progress status accordingly
-                progressBar.setVisibility(View.VISIBLE);
-            }
-        });
     }
+
 
 
 

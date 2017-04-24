@@ -5,6 +5,8 @@ package se2017.lex;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  *
@@ -18,14 +20,18 @@ public class IndexObjects {
     public int currentHI;
     public int LITime;
     public int HITime;
-    public String date;
+    public double date;
+    public String key;
+    public Map<String, Boolean> stars = new HashMap<>();
+
     public IndexObjects(){ super();}
-    public IndexObjects(int chi, int lit, int hit,String d)
+    public IndexObjects(int chi, int lit, int hit,double d, String k)
     {
         this.currentHI = chi;
         this.LITime = lit;
         this.HITime = hit;
         this.date = d;
+        this.key = k;
 
     }
     public IndexObjects(int chi, int lit, int hit)
@@ -34,22 +40,43 @@ public class IndexObjects {
         this.LITime = lit;
         this.HITime = hit;
         Date today = Calendar.getInstance().getTime();
-
-        // (2) create a date "formatter" (the date format we want)
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 
         // (3) create a new String using the date format we want
-        this.date = formatter.format(today);
+        String stn = formatter.format(today);
+        this.date = Double.parseDouble(stn);
 
+        this.key = null;
 
     }
-    void currentdate() {
+    public IndexObjects(int chi, int lit, int hit,String k)
+    {
+        this.currentHI = chi;
+        this.LITime = lit;
+        this.HITime = hit;
         Date today = Calendar.getInstance().getTime();
+        this.key = k;
 
         // (2) create a date "formatter" (the date format we want)
         SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 
         // (3) create a new String using the date format we want
-        date = formatter.format(today);
+        String stn = formatter.format(today);
+        this.date = Double.parseDouble(stn);
+
+
     }
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("current", currentHI);
+        result.put("LI", LITime);
+        result.put("speed",HITime);
+        result.put("key", key);
+        result.put("date",date);
+
+
+        return result;
+    }
+
+
 }
