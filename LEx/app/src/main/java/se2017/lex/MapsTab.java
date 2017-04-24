@@ -48,11 +48,13 @@ package se2017.lex;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -70,6 +72,11 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
 import java.util.Date;
@@ -91,6 +98,10 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     LocationRequest mLocationRequest;
     Marker mAPLocationMarker;
     private static long pollingRate = 6000;
+    public String userid = "jariy";
+    public DatabaseReference fDatabase;
+    public static LocationObject[] APLocArray = new LocationObject[10];
+
 
     //public void getPollingRate()
     //{
@@ -114,6 +125,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
         createLocationRequest();
 
+
         setContentView(R.layout.activity_maps_tab);
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             checkLocationPermission();
@@ -122,6 +134,10 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+
+
+
     }
 
 
@@ -152,8 +168,55 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
             mMap.setMyLocationEnabled(true);
         }
 
+
         mMap.setOnMapClickListener(this);
         mMap.setOnMapLongClickListener(this);
+
+
+
+        fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/ActivePeriodLocations");
+
+        fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/ActivePeriodLocations");
+        fDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                int i = 0;
+
+                for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    if (i < (APLocArray.length)) {
+                        APLocArray[i] = child.getValue(LocationObject.class);
+                        i++;
+                    }
+                }
+            }
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("Failed to read value.", error.toException());
+            }
+        });
+
+        int counter = 0;
+
+        while (APLocArray[counter] != null)
+        {
+            LatLng latLng = new LatLng(APLocArray[counter].lat, APLocArray[counter].longi);
+            MarkerOptions markerOptions = new MarkerOptions();
+            markerOptions.position(latLng);
+            markerOptions.title("Active Period Location");
+            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+            mMap.addMarker(markerOptions);
+            counter++;
+        }
+
+
+    }
+
+    public void addAPMarkers(){
+
+
     }
 
     protected synchronized void buildGoogleApiClient() {
@@ -235,6 +298,17 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         markerOptions.title("Active Period Location");
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
         mAPLocationMarker = mMap.addMarker(markerOptions);
+
+        Location APLoc = new Location(LocationManager.GPS_PROVIDER);
+        APLoc.setLatitude(latLng.latitude);
+        APLoc.setLongitude(latLng.longitude);
+
+        //Create child location with key
+        String key = fDatabase.push().getKey();
+        //Create a new Goal Object (java class) to store goal info entered by the user
+        LocationObject NewL = new LocationObject(APLoc.getLatitude(), APLoc.getLongitude(), APLoc.getSpeed(), key);
+        //Stores the Goal into database
+        fDatabase.child(key).setValue(NewL);
 
     }
 

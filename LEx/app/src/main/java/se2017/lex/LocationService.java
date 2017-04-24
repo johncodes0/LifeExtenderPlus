@@ -183,7 +183,7 @@ public class LocationService extends Service {
                 //Create child location with key
                 String key = fDatabase.push().getKey();
                 //Create a new Goal Object (java class) to store goal info entered by the user
-                LocationObject NewL = new LocationObject(loc, key);
+                LocationObject NewL = new LocationObject(loc.getLatitude(), loc.getLongitude(), loc.getSpeed(), key);
                 //Stores the Goal into database
                 fDatabase.child(key).setValue(NewL);
 

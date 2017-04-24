@@ -2,19 +2,36 @@ package se2017.lex;
 
 import android.location.Location;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class LocationObject {
+    public Map<String, Boolean> stars = new HashMap<>();
 
-    public Location loc;
+    public double lat;
+    public double longi;
+    public float speed;
     public String n;
 
     public LocationObject(){ super();}
 
-    public LocationObject(Location locat, String key)
+    public LocationObject(double lati, double longit, float fast, String key)
     {
-        super();
-        this.loc = locat;
+        this.lat = lati;
+        this.longi = longit;
+        this.speed = fast;
         this.n = key;
+    }
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("Long", longi);
+        result.put("Lat", lat);
+        result.put("speed", speed);
+        result.put("key", n);
+
+
+        return result;
     }
 
 
