@@ -174,7 +174,6 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
 
 
-        fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/ActivePeriodLocations");
 
         fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/ActivePeriodLocations");
         fDatabase.addValueEventListener(new ValueEventListener() {
