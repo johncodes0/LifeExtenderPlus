@@ -70,9 +70,8 @@ public class StatsTab extends AppCompatActivity {
                 Log.w("Failed to read value.", error.toException());
             }
         });
-        pushHI();
 
-
+    pushHI();
         int counter = 0;
         while (HI[counter] != null)
         {
@@ -81,6 +80,7 @@ public class StatsTab extends AppCompatActivity {
             date[counter] = HI[counter].date;
             current[counter] = HI[counter].currentHI;
         }
+
 
 
 
@@ -95,7 +95,7 @@ public class StatsTab extends AppCompatActivity {
 
         // (3) create a new String using the date format we want
         String d1 = formatter.format(today);
-        double d = 20172404;
+        double d = Double.parseDouble(d1);
         int i =0;
         while (HI[i] != null)
         {
