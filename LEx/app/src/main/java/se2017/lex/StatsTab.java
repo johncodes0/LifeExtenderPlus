@@ -77,15 +77,18 @@ public class StatsTab extends AppCompatActivity {
         Date today = Calendar.getInstance().getTime();
 
         // (2) create a date "formatter" (the date format we want)
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd", Locale.US);
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
 
         // (3) create a new String using the date format we want
         String d1 = formatter.format(today);
-        double d = Double.parseDouble(d1);
-        for (int i = 0; i < HI.length; i++) {
+        double d = 20172404;
+        int i =0;
+        while (HI[i] != null)
+        {
             if (HI[i].date == d) {
                 return;
             }
+            i++;
         }
         calculateHI();
         String key = fDatabase.push().getKey();
