@@ -482,17 +482,17 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
                 //Start s:m:h
                 secondStart = (unformattedTimeStart / 1000) % 60;
                 minuteStart = (unformattedTimeStart / (1000 * 60)) % 60;
-                hourStart = (unformattedTimeStart / (1000 * 60 * 60)) % 24;
+                hourStart = (unformattedTimeStart / (1000 * 60 * 60)) % 24-4;
                 //End s:m:h
                 secondEnd = (unformattedTimeEnd / 1000) % 60;
                 minuteEnd = (unformattedTimeEnd / (1000 * 60)) % 60;
-                hourEnd = (unformattedTimeEnd / (1000 * 60 * 60)) % 24;
+                hourEnd = (unformattedTimeEnd / (1000 * 60 * 60)) % 24-4;
                 if(overlaps(items.get(i),items.get(i+1))){
                     sorted.add(new eTime(secondStart,minuteStart,hourStart,
                                     (items.get(i+1).getEnd().getDateTime().getValue()/ 1000 % 60),
                                     (items.get(i+1).getEnd().getDateTime().getValue()/ (1000 * 60) % 60),
-                                    (items.get(i+1).getEnd().getDateTime().getValue()/(1000 * 60 * 60) % 24),
-                                    items.get(i+1).getSummary()));
+                                    (items.get(i+1).getEnd().getDateTime().getValue()/(1000 * 60 * 60) % 24-4),
+                                    "Overlapping Event"));
                     i++;
                 } else {
                     sorted.add(new eTime(secondStart,minuteStart,hourStart,secondEnd,minuteEnd,hourEnd,items.get(i).getSummary()));
@@ -500,10 +500,10 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
                         sorted.add(new eTime(
                                 (items.get(i+1).getStart().getDateTime().getValue()/ 1000 % 60),
                                 (items.get(i+1).getStart().getDateTime().getValue()/ (1000 * 60) % 60),
-                                (items.get(i+1).getStart().getDateTime().getValue()/(1000 * 60 * 60) % 24),
+                                (items.get(i+1).getStart().getDateTime().getValue()/(1000 * 60 * 60) % 24-4),
                                 (items.get(i+1).getEnd().getDateTime().getValue()/ 1000 % 60),
                                 (items.get(i+1).getEnd().getDateTime().getValue()/ (1000 * 60) % 60),
-                                (items.get(i+1).getEnd().getDateTime().getValue()/(1000 * 60 * 60) % 24),
+                                (items.get(i+1).getEnd().getDateTime().getValue()/(1000 * 60 * 60) % 24-4),
                                 items.get(i+1).getSummary()));
                     }
                 }
@@ -523,6 +523,10 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
         }
 
         private boolean overlaps(Event a, Event b){
+            if((a.getEnd().getDateTime().getValue()/86400%365)!=(b.getStart().getDateTime().getValue()/86400%365)){
+                return false;
+            }
+
             long end = a.getEnd().getDateTime().getValue()/ (1000 * 60 * 60) % 24;
             long start = b.getStart().getDateTime().getValue()/ (1000 * 60 * 60) % 24;
             long endMin = a.getEnd().getDateTime().getValue()/ (1000 * 60) % 60;
