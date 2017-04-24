@@ -77,7 +77,7 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
 
 
     public static List<eTime> sorted;
-    
+
 
 
     public class eTime{
@@ -465,7 +465,14 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
 
             sorted = new ArrayList<eTime>();
 
+            int day = (int) items.get(0).getStart().getDateTime().getValue()/86400%365;
+
             for(int i = 0; i < items.size()-1;i++){
+
+//                if((items.get(i).getStart().getDateTime().getValue()/86400%365)!=day){
+//                    break;
+//                }
+
                 Event event = items.get(i);
                 unformattedTimeStart = event.getStart().getDateTime().getValue();
                 unformattedTimeEnd = event.getEnd().getDateTime().getValue();
@@ -571,22 +578,46 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
 
                 TextView listEvent = new TextView(this);
                 listEvent.setText(sorted.get(i).name);
-                listEvent.setTextSize(40);
+                listEvent.setTextSize(20);
                 listEvent.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 ((LinearLayout) disArr).addView(listEvent);
 
                 TextView eventStart = new TextView(this);
-                eventStart.setText("From: " + sorted.get(i).hourStart + ":" + sorted.get(i).minuteStart);
-                eventStart.setTextSize(20);
+                eventStart.setText("From: " + sorted.get(i).hourStart + ":" + String.format("%02d" ,sorted.get(i).minuteStart));
+                eventStart.setTextSize(15);
                 eventStart.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 ((LinearLayout) disArr).addView(eventStart);
 
                 TextView eventEnd = new TextView(this);
-                eventEnd.setText("To: " + sorted.get(i).hourEnd + ":" + sorted.get(i).minuteEnd);
-                eventEnd.setTextSize(20);
+                eventEnd.setText("To: " + sorted.get(i).hourEnd + ":" + String.format("%02d", sorted.get(i).minuteEnd));
+                eventEnd.setTextSize(15);
                 eventEnd.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 ((LinearLayout) disArr).addView(eventEnd);
             }
+        }
+    }
+
+
+    public long startAPSuggestion;
+    public long endAPSuggestion;
+    boolean timeAvailable;
+
+    public void findOpenTimes(View v) {
+        for (int i = 1; i < sorted.size(); i++)
+        {
+            timeAvailable = false;
+            if (sorted.get(i).hourStart - sorted.get(i-1).hourEnd > 1 && sorted.get(i-1).hourEnd < 10)
+            {
+                startAPSuggestion = sorted.get(i-1).hourEnd;
+                endAPSuggestion = startAPSuggestion + 1;
+                timeAvailable = true;
+                //Ask user if suggestion is okay
+            }
+        }
+        if (timeAvailable = false)
+        {
+            //Report that today is all full
+
         }
     }
 
