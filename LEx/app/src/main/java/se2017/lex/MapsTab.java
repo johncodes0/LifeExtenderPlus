@@ -323,6 +323,22 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
     public static final int MY_PERMISSIONS_REQUEST_LOCATION = 99;
 
+    public boolean isNearAP()
+    {
+        boolean near = false;
+
+        int counter = 0;
+
+        while (APLocArray[counter] != null)
+        {
+            if (Math.abs(mLastLocation.getLatitude() - APLocArray[counter].lat) < 0.00027 && Math.abs(mLastLocation.getLongitude() - APLocArray[counter].longi) < 0.0027)
+                near = true;
+            counter++;
+        }
+
+        return near;
+    }
+
     public boolean checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)

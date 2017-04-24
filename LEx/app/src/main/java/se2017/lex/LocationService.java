@@ -23,6 +23,7 @@ public class LocationService extends Service
     private static final float LOCATION_DISTANCE = 10f;
 
 
+
     private class LocationListener implements android.location.LocationListener
     {
         Location mLastLocation;
@@ -81,6 +82,7 @@ public class LocationService extends Service
     @Override
     public void onCreate()
     {
+
         Log.e(TAG, "onCreate");
         initializeLocationManager();
         try {
@@ -125,4 +127,13 @@ public class LocationService extends Service
             mLocationManager = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
         }
     }
+
+
+    private void sendMessageToActivity(String newData){
+        Intent broadcastIntent = new Intent();
+        broadcastIntent.setAction("ServiceToActivityAction");
+        broadcastIntent.putExtra("ServiceToActivityKey", newData);
+        sendBroadcast(broadcastIntent);
+    }
 }
+
