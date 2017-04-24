@@ -61,6 +61,7 @@
             android:name=".LocationService"
             android:process=":my_service" />
 
+        <activity android:name=".AddActivePeriod"></activity>
     </application>
 
 </manifest>

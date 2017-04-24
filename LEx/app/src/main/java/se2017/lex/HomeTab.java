@@ -54,6 +54,8 @@ import java.util.List;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
 
+
+
 /**
  * This class interacts with Google Calendar API.
  */
@@ -80,26 +82,7 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
 
 
 
-    public class eTime{
-        public long secondStart;
-        public long minuteStart;
-        public long hourStart;
-        public long secondEnd;
-        public long minuteEnd;
-        public long hourEnd;
-        public String name;
 
-
-        public eTime(long sS, long mS, long hS, long sE, long mE, long hE, String n){
-            this.secondStart = sS;
-            this.minuteStart = mS;
-            this.hourStart = hS;
-            this.secondEnd = sE;
-            this.minuteEnd = mE;
-            this.hourEnd = hE;
-            this.name = n;
-        }
-    }
 
 
 
@@ -140,16 +123,36 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_tab);
-        /*
-        LinearLayout activityLayout = new LinearLayout(this);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        activityLayout.setLayoutParams(lp);
-        activityLayout.setOrientation(LinearLayout.VERTICAL);
-        activityLayout.setPadding(16, 16, 16, 16);
 
-        */
+        
+
+//        View disArr = findViewById(R.id.displayArray);
+//        for (int i = 0; i < sorted.size(); i++) {
+//            if (sorted.get(i) != null) {
+//
+//                //Text View to display name of goal and give a fraction on the completion progress of the goal
+//
+//                TextView listEvent = new TextView(this);
+//                listEvent.setText(sorted.get(i).name);
+//                listEvent.setTextSize(20);
+//                listEvent.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                ((LinearLayout) disArr).addView(listEvent);
+//
+//                TextView eventStart = new TextView(this);
+//                eventStart.setText("From: " + sorted.get(i).hourStart + ":" + String.format("%02d" ,sorted.get(i).minuteStart));
+//                eventStart.setTextSize(15);
+//                eventStart.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                ((LinearLayout) disArr).addView(eventStart);
+//
+//                TextView eventEnd = new TextView(this);
+//                eventEnd.setText("To: " + sorted.get(i).hourEnd + ":" + String.format("%02d", sorted.get(i).minuteEnd));
+//                eventEnd.setTextSize(15);
+//                eventEnd.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+//                ((LinearLayout) disArr).addView(eventEnd);
+//            }
+//        }
+
+
 
         View activityLayout = findViewById(R.id.eventList);
 
@@ -598,26 +601,31 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
     }
 
 
-    public long startAPSuggestion;
-    public long endAPSuggestion;
-    boolean timeAvailable;
+    public static long startAPSuggestion;
+    public static long endAPSuggestion;
+    public static boolean timeAvailable;
 
     public void findOpenTimes(View v) {
         for (int i = 1; i < sorted.size(); i++)
         {
             timeAvailable = false;
-            if (sorted.get(i).hourStart - sorted.get(i-1).hourEnd > 1 && sorted.get(i-1).hourEnd < 10)
+            if (sorted.get(i).hourStart - sorted.get(i-1).hourEnd > 1)
             {
                 startAPSuggestion = sorted.get(i-1).hourEnd;
                 endAPSuggestion = startAPSuggestion + 1;
                 timeAvailable = true;
                 //Ask user if suggestion is okay
+
+                Intent newAP = new Intent(this, AddActivePeriod.class);
+                startActivity(newAP);
             }
         }
         if (timeAvailable = false)
         {
             //Report that today is all full
+            TextView noAP = (TextView) findViewById(R.id.displayIfError);
 
+            noAP.setText("No Time Available Today!");
         }
     }
 
