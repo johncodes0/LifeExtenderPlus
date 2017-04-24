@@ -70,12 +70,13 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
     static final int REQUEST_GOOGLE_PLAY_SERVICES = 1002;
     static final int REQUEST_PERMISSION_GET_ACCOUNTS = 1003;
 
-    private static final String BUTTON_TEXT = "Call Google Calendar API";
+    private static final String BUTTON_TEXT = "Connect to Calendars";
     private static final String PREF_ACCOUNT_NAME = "accountName";
     private static final String[] SCOPES = {CalendarScopes.CALENDAR_READONLY};
 
 
-    static List<eTime> sorted;
+    public static List<eTime> sorted;
+
     
     public class eTime{
         public long secondStart;
@@ -125,9 +126,6 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
         Intent toGoals = new Intent(this, GoalsTab.class);
         startActivity(toGoals);
     }
-
-
-
 
 
 
@@ -191,6 +189,9 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
 
         startService(new Intent(this, LocationService.class));
     }
+
+
+
 
 
     /**
@@ -462,7 +463,7 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
 
             sorted = new ArrayList<eTime>();
 
-            for(int i = 0; i< items.size()-1;i++){
+            for(int i = 0; i < items.size()-1;i++){
                 Event event = items.get(i);
                 unformattedTimeStart = event.getStart().getDateTime().getValue();
                 unformattedTimeEnd = event.getEnd().getDateTime().getValue();
@@ -529,8 +530,9 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
             if (output == null || output.size() == 0) {
                 mOutputText.setText("No results returned.");
             } else {
-                output.add(0, "Data retrieved using the Google Calendar API:");
-                mOutputText.setText(TextUtils.join("\n", output));
+                output.add(0, "Data retrieved! Refresh to Display.");
+                mOutputText.setText("Data retrieved! Refresh to Display.");
+                //mOutputText.setText(TextUtils.join("\n", output));
             }
         }
 
@@ -557,18 +559,35 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
     }
 
 
+    public void displayGoals(View v) {
 
+        View disArr = findViewById(R.id.displayArray);
+        for (int i = 0; i < sorted.size(); i++) {
+            if (sorted.get(i) != null) {
 
+                //Text View to display name of goal and give a fraction on the completion progress of the goal
 
+                TextView listEvent = new TextView(this);
+                listEvent.setText(sorted.get(i).name);
+                listEvent.setTextSize(40);
+                listEvent.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                ((LinearLayout) disArr).addView(listEvent);
 
+                TextView eventStart = new TextView(this);
+                eventStart.setText("From: " + sorted.get(i).hourStart + ":" + sorted.get(i).minuteStart);
+                eventStart.setTextSize(20);
+                eventStart.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                ((LinearLayout) disArr).addView(eventStart);
 
+                TextView eventEnd = new TextView(this);
+                eventEnd.setText("To: " + sorted.get(i).hourEnd + ":" + sorted.get(i).minuteEnd);
+                eventEnd.setTextSize(20);
+                eventEnd.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                ((LinearLayout) disArr).addView(eventEnd);
+            }
+        }
+    }
 
-
-
-
-
-
-    
 }
 
 //public class HomeTab extends AppCompatActivity{

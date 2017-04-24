@@ -21,19 +21,67 @@
         tools:layout_constraintRight_creator="1"
         tools:layout_constraintLeft_creator="1" />
 
+    <LinearLayout
+        android:id="@+id/eventList"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_constraintTop_creator="1"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <ImageButton
+        android:id="@+id/refreshButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="8dp"
+        android:onClick="displayGoals"
+        app:layout_constraintLeft_toRightOf="@+id/eventList"
+        app:layout_constraintRight_toLeftOf="@+id/imageButton3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_sync_black_24dp"
+        tools:ignore="ContentDescription"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1" />
+
     <ScrollView
-        android:layout_width="366dp"
-        android:layout_height="429dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
+        android:layout_width="0dp"
+        android:layout_height="316dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        app:layout_constraintBottom_toTopOf="@+id/fragment"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="15dp">
 
         <LinearLayout
-            android:id="@+id/eventList"
+            android:id="@+id/displayArray"
             android:layout_width="320dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp"></LinearLayout>
+            android:orientation="vertical"></LinearLayout>
     </ScrollView>
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="58dp"
+        app:layout_constraintBottom_toBottomOf="@+id/refreshButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/refreshButton"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_search_category_default"
+        tools:ignore="ContentDescription,RtlHardcoded"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1" />
 
 </android.support.constraint.ConstraintLayout>
