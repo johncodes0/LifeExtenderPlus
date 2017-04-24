@@ -10,15 +10,25 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class LocationService extends Service {
     public static final String BROADCAST_ACTION = "Hello World";
     private static final int TWO_MINUTES = 1000 * 60 * 2;
-    public int pollingRate;
+    public int pollingRate = 1000 * 60 * 1;
     public LocationManager locationManager;
     public MyLocationListener listener;
     public Location previousBestLocation = null;
+    public String userid = "jariy";
+    private DatabaseReference fDatabase;
+    public LocationObject[] LocArray = new LocationObject[1440];
 
     Intent intent;
     int counter = 0;
@@ -27,6 +37,31 @@ public class LocationService extends Service {
     public void onCreate() {
         super.onCreate();
         intent = new Intent(BROADCAST_ACTION);
+        fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/Locations");
+
+        fDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                int i = 0;
+
+                for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    if(i<(LocArray.length)) {
+                        LocArray[i] = child.getValue(LocationObject.class);
+                        i++;
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("Failed to read value.", error.toException());
+            }
+        });
+
     }
 
     @Override
@@ -144,6 +179,13 @@ public class LocationService extends Service {
                 intent.putExtra("Longitude", loc.getLongitude());
                 intent.putExtra("Provider", loc.getProvider());
                 sendBroadcast(intent);
+
+                //Create child location with key
+                String key = fDatabase.push().getKey();
+                //Create a new Goal Object (java class) to store goal info entered by the user
+                LocationObject NewL = new LocationObject(loc, key);
+                //Stores the Goal into database
+                fDatabase.child(key).setValue(NewL);
 
             }
         }
