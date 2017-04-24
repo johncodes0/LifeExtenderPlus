@@ -75,9 +75,11 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
     private static final String[] SCOPES = {CalendarScopes.CALENDAR_READONLY};
 
 
-    public static List<eTime> sorted;
 
+    public static List<eTime> sorted;
     
+
+
     public class eTime{
         public long secondStart;
         public long minuteStart;
