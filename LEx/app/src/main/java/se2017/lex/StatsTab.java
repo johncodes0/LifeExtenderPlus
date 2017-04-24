@@ -48,6 +48,9 @@ public class StatsTab extends AppCompatActivity {
         setContentView(R.layout.activity_stats_tab);
         fDatabase = FirebaseDatabase.getInstance().getReference(userid + "/HI");
         fDatabase.addValueEventListener(new ValueEventListener() {
+
+
+
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
@@ -61,6 +64,8 @@ public class StatsTab extends AppCompatActivity {
                         i++;
                     }
                 }
+
+
 
             }
 

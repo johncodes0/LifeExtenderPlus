@@ -43,10 +43,10 @@
         android:id="@+id/btn_calcRunTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn_calcGymTime"
-        android:layout_below="@+id/btn_calcGymTime"
         android:onClick="viewRGraph"
-        app:srcCompat="@mipmap/statsicon" />
+        app:srcCompat="@mipmap/statsicon"
+        android:layout_below="@+id/btn_calcGymTime"
+        android:layout_alignStart="@+id/btn_calcGymTime" />
 
     <ImageButton
         android:id="@+id/btn_calcWalkTime"
