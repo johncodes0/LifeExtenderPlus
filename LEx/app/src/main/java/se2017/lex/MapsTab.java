@@ -106,6 +106,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     public String userid = "jariy";
     public DatabaseReference fDatabase;
     public DatabaseReference currDatabase;
+    public DatabaseReference APDatabase;
     public static LocationObject[] APLocArray = new LocationObject[10];
     NotificationCompat.Builder notif;
     private static final int uniqueID = 481517;
@@ -186,6 +187,8 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
         fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/ActivePeriodLocations");
         currDatabase = FirebaseDatabase.getInstance().getReference(userid+"/CurrLocations");
+        APDatabase = FirebaseDatabase.getInstance().getReference(userid+"/TimeSpentAtAP");
+
         fDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -292,6 +295,11 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         if (isNearAP())
         {
             mCurrLocationMarker.setTitle("You are near an AP!");
+            String key2 = APDatabase.push().getKey();
+            //Create a new Goal Object (java class) to store goal info entered by the user
+            TimeObject NewT = new TimeObject(location.getTime(), key2);
+            //Stores the Goal into database
+            APDatabase.child(key).setValue(NewT);
         }
 
 
