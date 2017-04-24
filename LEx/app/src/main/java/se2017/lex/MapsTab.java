@@ -85,6 +85,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
 import java.util.Date;
+
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.support.v7.app.NotificationCompat;
+import android.support.v7.app.ActionBarActivity;
+
+
 /**
  * This class interacts with Google Maps API pulling GPS data and
  *
@@ -95,6 +102,9 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener, OnMapLongClickListener, OnMapClickListener {
+
+
+
 
     private GoogleMap mMap;
     GoogleApiClient mGoogleApiClient;
@@ -146,9 +156,11 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         mapFragment.getMapAsync(this);
 
 
-
+        notif = new NotificationCompat.Builder(this);
+        notif.setAutoCancel(true);
 
     }
+
 
 
     /**
@@ -300,6 +312,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
             TimeObject NewT = new TimeObject(location.getTime(), key2);
             //Stores the Goal into database
             APDatabase.child(key).setValue(NewT);
+            sendNotification(null);
         }
 
 
