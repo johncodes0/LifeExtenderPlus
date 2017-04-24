@@ -36,25 +36,24 @@ public class SettingsTab extends AppCompatActivity {
         notif = new NotificationCompat.Builder(this);
         notif.setAutoCancel(true);
 
-
     }
 
-    public void sendNotification(View view){
-        notif.setSmallIcon(R.drawable.app_logo);
-        notif.setTicker("Ticker");
-        notif.setWhen(System.currentTimeMillis());
-        notif.setContentTitle("LifeExtender+");
-        notif.setContentText("Time to get some exercise!");
-
-        Intent intent = new Intent(this,HomeTab.class);
-//        startActivity(intent);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        notif.setContentIntent(pendingIntent);
-
-        NotificationManager nm =  (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        nm.notify(uniqueID,notif.build());
-
-    }
+//    public void sendNotification(View view){
+//        notif.setSmallIcon(R.drawable.app_logo);
+//        notif.setTicker("Ticker");
+//        notif.setWhen(System.currentTimeMillis());
+//        notif.setContentTitle("LifeExtender+");
+//        notif.setContentText("Time to get some exercise!");
+//
+//        Intent intent = new Intent(this,HomeTab.class);
+////        startActivity(intent);
+//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+//        notif.setContentIntent(pendingIntent);
+//
+//        NotificationManager nm =  (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+//        nm.notify(uniqueID,notif.build());
+//
+//    }
 
 
     //The rate at which the Google Maps will poll for GPS coordinates.
@@ -77,7 +76,7 @@ public class SettingsTab extends AppCompatActivity {
         Intent changeN = new Intent(this,ChangeNotifcations.class);
         startActivity(changeN);
         //TESTING THE NOTIFICATION
-        sendNotification(null);
+//        sendNotification(null);
     }
 
     public void changeLocationGPSSettings(View v){

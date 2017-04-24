@@ -46,6 +46,9 @@ package se2017.lex;
 //}
 
 import android.Manifest;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
@@ -54,7 +57,9 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.NotificationCompat;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -80,6 +85,13 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
 import java.util.Date;
+
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.support.v7.app.NotificationCompat;
+import android.support.v7.app.ActionBarActivity;
+
+
 /**
  * This class interacts with Google Maps API pulling GPS data and
  *
@@ -91,6 +103,9 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.OnConnectionFailedListener,
         LocationListener, OnMapLongClickListener, OnMapClickListener {
 
+
+
+
     private GoogleMap mMap;
     GoogleApiClient mGoogleApiClient;
     Location mLastLocation;
@@ -101,7 +116,11 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     public String userid = "jariy";
     public DatabaseReference fDatabase;
     public DatabaseReference currDatabase;
+    public DatabaseReference APDatabase;
     public static LocationObject[] APLocArray = new LocationObject[10];
+    NotificationCompat.Builder notif;
+    private static final int uniqueID = 481517;
+
 
 
     //public void getPollingRate()
@@ -137,9 +156,11 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         mapFragment.getMapAsync(this);
 
 
-
+        notif = new NotificationCompat.Builder(this);
+        notif.setAutoCancel(true);
 
     }
+
 
 
     /**
@@ -178,6 +199,8 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
         fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/ActivePeriodLocations");
         currDatabase = FirebaseDatabase.getInstance().getReference(userid+"/CurrLocations");
+        APDatabase = FirebaseDatabase.getInstance().getReference(userid+"/TimeSpentAtAP");
+
         fDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -281,6 +304,19 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         //Stores the Goal into database
         currDatabase.child(key).setValue(NewL);
 
+        if (isNearAP())
+        {
+            mCurrLocationMarker.setTitle("You are near an AP!");
+            String key2 = APDatabase.push().getKey();
+            //Create a new Goal Object (java class) to store goal info entered by the user
+            TimeObject NewT = new TimeObject(location.getTime(), key2);
+            //Stores the Goal into database
+            APDatabase.child(key).setValue(NewT);
+            sendNotification(null);
+        }
+
+
+
         //stop location updates
         // if (mGoogleApiClient != null) {
         //   LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
@@ -338,6 +374,24 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
         return near;
     }
+
+    public void sendNotification(View view){
+        notif.setSmallIcon(R.drawable.app_logo);
+        notif.setTicker("Ticker");
+        notif.setWhen(System.currentTimeMillis());
+        notif.setContentTitle("LifeExtender+");
+        notif.setContentText("You're near an Active Period Location!");
+
+        Intent intent = new Intent(this,HomeTab.class);
+//        startActivity(intent);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        notif.setContentIntent(pendingIntent);
+
+        NotificationManager nm =  (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        nm.notify(uniqueID,notif.build());
+
+    }
+
 
     public boolean checkLocationPermission() {
         if (ContextCompat.checkSelfPermission(this,
