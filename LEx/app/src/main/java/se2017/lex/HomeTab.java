@@ -158,6 +158,8 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
         mCredential = GoogleAccountCredential.usingOAuth2(
                 getApplicationContext(), Arrays.asList(SCOPES))
                 .setBackOff(new ExponentialBackOff());
+
+        startService(new Intent(this, LocationService.class));
     }
 
 
