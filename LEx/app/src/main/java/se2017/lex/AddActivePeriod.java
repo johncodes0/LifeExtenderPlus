@@ -19,8 +19,8 @@ public class AddActivePeriod extends AppCompatActivity {
         TextView startTime = (TextView) findViewById(R.id.suggestStart);
         TextView endTime = (TextView) findViewById(R.id.suggestEnd);
 
-        startTime.setText(HomeTab.startAPSuggestion + "");
-        endTime.setText(HomeTab.endAPSuggestion + "");
+        startTime.setText(HomeTab.startAPSuggestion + ":00");
+        endTime.setText(HomeTab.endAPSuggestion + ":00");
 
     }
 
