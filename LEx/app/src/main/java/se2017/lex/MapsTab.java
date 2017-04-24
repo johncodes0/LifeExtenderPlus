@@ -100,6 +100,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     private static long pollingRate = 6000;
     public String userid = "jariy";
     public DatabaseReference fDatabase;
+    public DatabaseReference currDatabase;
     public static LocationObject[] APLocArray = new LocationObject[10];
 
 
@@ -176,6 +177,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
 
         fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/ActivePeriodLocations");
+        currDatabase = FirebaseDatabase.getInstance().getReference(userid+"/CurrLocations");
         fDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -205,7 +207,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
             MarkerOptions markerOptions = new MarkerOptions();
             markerOptions.position(latLng);
             markerOptions.title("Active Period Location");
-            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
+            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW));
             mMap.addMarker(markerOptions);
             counter++;
         }
@@ -252,9 +254,9 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     public void onLocationChanged(Location location) {
 
         mLastLocation = location;
-        //if (mCurrLocationMarker != null) {
-        //  mCurrLocationMarker.remove();
-        //}
+        if (mCurrLocationMarker != null) {
+          mCurrLocationMarker.remove();
+        }
 
 
         //Place current location marker
@@ -271,6 +273,13 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         //move map camera
         mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(11));
+
+        //Create child location with key
+        String key = currDatabase.push().getKey();
+        //Create a new Goal Object (java class) to store goal info entered by the user
+        LocationObject NewL = new LocationObject(location.getLatitude(), location.getLongitude(), location.getSpeed(), key);
+        //Stores the Goal into database
+        currDatabase.child(key).setValue(NewL);
 
         //stop location updates
         // if (mGoogleApiClient != null) {
