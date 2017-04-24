@@ -3,6 +3,7 @@ package se2017.lex;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -10,6 +11,16 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * This class displays the HealthIndex while also being responsible for analysis of data.
@@ -19,15 +30,62 @@ import android.view.MenuItem;
 public class StatsTab extends AppCompatActivity {
 
     //Creates a class object HealthInfo that stores the data needed to calculate the health index
-    public static IndexObjects HealthInfo = new IndexObjects(200, 60, 60);
+    public static IndexObjects HealthInfo = new IndexObjects(200,60,60);
+    private DatabaseReference fDatabase;
+    String userid ="jariy";
+    public IndexObjects HI[] = new IndexObjects[20];
 
     /** On opening the Stats Tab, calculate and display the Health Index */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats_tab);
+        fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/HI");
+        String key = fDatabase.push().getKey();
+        fDatabase.child(key).setValue(HealthInfo);
 
-        calculateHI();
+
+        fDatabase.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                int i = 0;
+
+                for (DataSnapshot child : dataSnapshot.getChildren()) {
+                    if(child.getValue(IndexObjects.class) == null) { break;
+                    }
+                    if(i<(HI.length)) {
+                        HI[i] = child.getValue(IndexObjects.class);
+                        i++;
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.w("Failed to read value.", error.toException());
+            }
+        });
+
+    }
+    public void pushHI(){
+        Date today = Calendar.getInstance().getTime();
+
+        // (2) create a date "formatter" (the date format we want)
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+
+        // (3) create a new String using the date format we want
+        String d = formatter.format(today);
+        for(int i =0; i <HI.length; i++) {
+            if(HI[i].date == d) {
+                return;
+            }
+        }
+        String key = fDatabase.push().getKey();
+        fDatabase.child(key).setValue(HealthInfo);
     }
 
     /** Drafted formula to calculate the Health Index */
@@ -41,6 +99,7 @@ public class StatsTab extends AppCompatActivity {
         int x2 = HealthInfo.HITime; //time for high intensity periods (minutes)
         int H_nm1 = H_0; //previous health index
         int H_n = 0; //current health index
+
 
         //calculates current HI
         if (x1 > 30) {
