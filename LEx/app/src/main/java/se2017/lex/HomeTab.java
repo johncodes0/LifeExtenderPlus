@@ -75,6 +75,31 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
     private static final String[] SCOPES = {CalendarScopes.CALENDAR_READONLY};
 
 
+    static List<eTime> sorted;
+    
+    public class eTime{
+        public long secondStart;
+        public long minuteStart;
+        public long hourStart;
+        public long secondEnd;
+        public long minuteEnd;
+        public long hourEnd;
+        public String name;
+
+
+        public eTime(long sS, long mS, long hS, long sE, long mE, long hE, String n){
+            this.secondStart = sS;
+            this.minuteStart = mS;
+            this.hourStart = hS;
+            this.secondEnd = sE;
+            this.minuteEnd = mE;
+            this.hourEnd = hE;
+            this.name = n;
+        }
+    }
+
+
+
     //Fragment code
     public void gotoHome(View v) {
         Intent toHome = new Intent(this, HomeTab.class);
@@ -424,6 +449,53 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
                     .execute();
             List<Event> items = events.getItems();
 
+
+            long unformattedTimeStart;
+            long unformattedTimeEnd;
+            long secondStart;
+            long minuteStart;
+            long hourStart;
+            long secondEnd;
+            long minuteEnd;
+            long hourEnd;
+            long duration;
+
+            sorted = new ArrayList<eTime>();
+
+            for(int i = 0; i< items.size()-1;i++){
+                Event event = items.get(i);
+                unformattedTimeStart = event.getStart().getDateTime().getValue();
+                unformattedTimeEnd = event.getEnd().getDateTime().getValue();
+                //Start s:m:h
+                secondStart = (unformattedTimeStart / 1000) % 60;
+                minuteStart = (unformattedTimeStart / (1000 * 60)) % 60;
+                hourStart = (unformattedTimeStart / (1000 * 60 * 60)) % 24;
+                //End s:m:h
+                secondEnd = (unformattedTimeEnd / 1000) % 60;
+                minuteEnd = (unformattedTimeEnd / (1000 * 60)) % 60;
+                hourEnd = (unformattedTimeEnd / (1000 * 60 * 60)) % 24;
+                if(overlaps(items.get(i),items.get(i+1))){
+                    sorted.add(new eTime(secondStart,minuteStart,hourStart,
+                                    (items.get(i+1).getEnd().getDateTime().getValue()/ 1000 % 60),
+                                    (items.get(i+1).getEnd().getDateTime().getValue()/ (1000 * 60) % 60),
+                                    (items.get(i+1).getEnd().getDateTime().getValue()/(1000 * 60 * 60) % 24),
+                                    items.get(i+1).getSummary()));
+                    i++;
+                } else {
+                    sorted.add(new eTime(secondStart,minuteStart,hourStart,secondEnd,minuteEnd,hourEnd,items.get(i).getSummary()));
+                    if(i==(items.size()-1)){
+                        sorted.add(new eTime(
+                                (items.get(i+1).getStart().getDateTime().getValue()/ 1000 % 60),
+                                (items.get(i+1).getStart().getDateTime().getValue()/ (1000 * 60) % 60),
+                                (items.get(i+1).getStart().getDateTime().getValue()/(1000 * 60 * 60) % 24),
+                                (items.get(i+1).getEnd().getDateTime().getValue()/ 1000 % 60),
+                                (items.get(i+1).getEnd().getDateTime().getValue()/ (1000 * 60) % 60),
+                                (items.get(i+1).getEnd().getDateTime().getValue()/(1000 * 60 * 60) % 24),
+                                items.get(i+1).getSummary()));
+                    }
+                }
+            }
+
             for (Event event : items) {
                 DateTime start = event.getStart().getDateTime();
                 if (start == null) {
@@ -437,7 +509,14 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
             return eventStrings;
         }
 
-
+        private boolean overlaps(Event a, Event b){
+            long end = a.getEnd().getDateTime().getValue()/ (1000 * 60 * 60) % 24;
+            long start = b.getStart().getDateTime().getValue()/ (1000 * 60 * 60) % 24;
+            if(end>=start){
+                return true;
+            }
+            return false;
+        }
         @Override
         protected void onPreExecute() {
             mOutputText.setText("");
