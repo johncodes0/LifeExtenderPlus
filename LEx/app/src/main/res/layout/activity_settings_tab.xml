@@ -46,7 +46,7 @@
         app:layout_constraintTop_toBottomOf="@+id/CalendarButton"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_frag"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/settingsTitle"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="65dp"
         android:text="Location/GPS"
         android:textColor="@android:color/black"
         android:textSize="18sp"
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_locationGPS"
         tools:layout_constraintTop_creator="1"
         android:layout_marginLeft="27dp"
-        android:layout_marginTop="69dp" />
+        android:layout_marginTop="54dp" />
 
     <TextView
         android:id="@+id/tv_profile"
@@ -124,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_Calendar"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_frag"
-        app:layout_constraintVertical_bias="0.32" />
+        app:layout_constraintVertical_bias="0.144" />
 
     <fragment
         android:id="@+id/bottom_frag"

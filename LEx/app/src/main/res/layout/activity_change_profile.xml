@@ -44,10 +44,10 @@
         android:text="Logout"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        android:layout_marginTop="151dp"
-        app:layout_constraintTop_toBottomOf="@+id/changePassword"
         android:layout_marginLeft="44dp"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="201dp"
+        app:layout_constraintTop_toBottomOf="@+id/publicHealthIndex" />
 
     <TextView
         android:id="@+id/deleteAccount"
@@ -75,16 +75,41 @@
         android:layout_marginLeft="44dp"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <TextView
-        android:id="@+id/changePassword"
+    <Switch
+        android:id="@+id/publicHI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Password"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:layout_marginLeft="44dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="33dp"
-        app:layout_constraintTop_toBottomOf="@+id/publicHealthIndex" />
+        android:layout_marginLeft="63dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/publicHealthIndex"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="122dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_lock_power_off"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton3"
+        app:layout_constraintLeft_toRightOf="@+id/logout"
+        android:layout_marginLeft="195dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/publicHI"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        tools:layout_editor_absoluteY="417dp"
+        app:layout_constraintLeft_toRightOf="@+id/deleteAccount"
+        android:layout_marginLeft="130dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

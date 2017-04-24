@@ -76,7 +76,7 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
 
 
     static List<eTime> sorted;
-    
+
     public class eTime{
         public long secondStart;
         public long minuteStart;
