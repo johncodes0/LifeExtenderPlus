@@ -13,6 +13,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_stats_tab" />
+    <include layout="@layout/content_stats_tab" /> <!--change-->
 
 </android.support.design.widget.CoordinatorLayout>

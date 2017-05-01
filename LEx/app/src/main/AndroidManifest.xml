@@ -61,7 +61,12 @@
             android:name=".LocationService"
             android:process=":my_service" />
 
-        <activity android:name=".AddActivePeriod"></activity>
+        <activity android:name=".r_graph" />
+        <activity android:name=".h_graph" />
+        <activity android:name=".w_graph" />
+        <activity android:name=".g_graph"/>
+        <activity android:name=".AddActivePeriod">
+        </activity>
     </application>
 
 </manifest>

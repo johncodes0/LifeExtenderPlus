@@ -24,6 +24,7 @@ import java.text.FieldPosition;
 import java.text.Format;
 import java.text.ParsePosition;
 import java.util.*;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,16 +34,29 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Arrays;
+import static se2017.lex.StatsTab.date;
 
 public class g_graph extends AppCompatActivity {
     private XYPlot plot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+         Number[] dates = new Number[StatsTab.date.length];
+        Number[] yaxis = new Number[StatsTab.HIGH.length];
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_g_graph);
         plot = (XYPlot) findViewById(R.id.plot);
+        for (int i=0; i<dates.length;i++)
+        {
+            dates[i] = (Number)StatsTab.date[i];
+        }
+        for (int i=0; i<dates.length;i++)
+        {
+            yaxis[i] = (Number)StatsTab.HIGH[i];
+        }
         // domainLabels = X values (Time in days)
+
         final Number[] domainLabels = {1, 2, 3, 6, 7, 8, 9, 10, 13, 14};
 
         // series1Numbers = Y values (Gym Time)
@@ -70,6 +84,5 @@ public class g_graph extends AppCompatActivity {
             public Object parseObject(String source, ParsePosition pos) {
                 return null;
             }});
-
     }
 }
