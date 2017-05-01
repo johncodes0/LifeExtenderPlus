@@ -28,16 +28,39 @@ import java.util.Locale;
  */
 
 public class StatsTab extends AppCompatActivity {
+    public void viewHGraph(View v)
+    {
+        Intent toHGraph = new Intent(this, h_graph.class);
+        startActivity(toHGraph);
+    }
+
+    public void viewWGraph(View v)
+    {
+        Intent toGraph = new Intent(this, w_graph.class);
+        startActivity(toGraph);
+    }
+
+    public void viewRGraph(View v)
+    {
+        Intent toGraph = new Intent(this, r_graph.class);
+        startActivity(toGraph);
+    }
+
+    public void viewGGraph(View v)
+    {
+        Intent toGraph = new Intent(this, g_graph.class);
+        startActivity(toGraph);
+    }
 
     //Creates a class object HealthInfo that stores the data needed to calculate the health index
     public static IndexObjects HealthInfo = new IndexObjects(210, 40, 30);
     private DatabaseReference fDatabase;
     String userid = "jariy";
     public IndexObjects HI[] = new IndexObjects[20];
-    public int HIGH[] = new int[20];
-    public int LOW[] = new int[20];
-    public double date[] = new double[20];
-    public int current[] = new int[20];
+    public static int HIGH[] = new int[20];
+    public static  int LOW[] = new int[20];
+    public static int date[] = new int[20];
+    public static int current[] = new int[20];
 
     /**
      * On opening the Stats Tab, calculate and display the Health Index
@@ -48,9 +71,6 @@ public class StatsTab extends AppCompatActivity {
         setContentView(R.layout.activity_stats_tab);
         fDatabase = FirebaseDatabase.getInstance().getReference(userid + "/HI");
         fDatabase.addValueEventListener(new ValueEventListener() {
-
-
-
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
@@ -65,8 +85,6 @@ public class StatsTab extends AppCompatActivity {
                     }
                 }
 
-
-
             }
 
             @Override
@@ -76,13 +94,14 @@ public class StatsTab extends AppCompatActivity {
             }
         });
 
-    pushHI();
+
+
         int counter = 0;
         while (HI[counter] != null)
         {
             HIGH[counter] = HI[counter].HITime;
             LOW[counter] = HI[counter].LITime;
-            date[counter] = HI[counter].date;
+            date[counter] = (int)HI[counter].date;
             current[counter] = HI[counter].currentHI;
         }
 
@@ -102,9 +121,11 @@ public class StatsTab extends AppCompatActivity {
         String d1 = formatter.format(today);
         double d = Double.parseDouble(d1);
         int i =0;
+
         while (HI[i] != null)
         {
-            if (HI[i].date == d) {
+
+            if (HI[i].date == 20170501) {
                 return;
             }
             i++;
@@ -139,29 +160,6 @@ public class StatsTab extends AppCompatActivity {
 
     }
 
-    public void viewHGraph(View v)
-    {
-        Intent toGraph = new Intent(this, h_graph.class);
-        startActivity(toGraph);
-    }
-
-    public void viewWGraph(View v)
-    {
-        Intent toGraph = new Intent(this, w_graph.class);
-        startActivity(toGraph);
-    }
-
-    public void viewRGraph(View v)
-    {
-        Intent toGraph = new Intent(this, r_graph.class);
-        startActivity(toGraph);
-    }
-
-    public void viewGGraph(View v)
-    {
-        Intent toGraph = new Intent(this, g_graph.class);
-        startActivity(toGraph);
-    }
 
 
 

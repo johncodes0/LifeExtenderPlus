@@ -35,9 +35,9 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class h_graph extends AppCompatActivity {
-    private XYPlot plot;
+    public XYPlot plot;
 
-    @Override
+@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_h_graph);
@@ -71,4 +71,28 @@ public class h_graph extends AppCompatActivity {
                 return null;
             }});
     }
+    public void viewHGraph(View v)
+    {
+        Intent toHGraph = new Intent(this, h_graph.class);
+        startActivity(toHGraph);
+    }
+
+    public void viewWGraph(View v)
+    {
+        Intent toGraph = new Intent(this, w_graph.class);
+        startActivity(toGraph);
+    }
+
+    public void viewRGraph(View v)
+    {
+        Intent toGraph = new Intent(this, r_graph.class);
+        startActivity(toGraph);
+    }
+
+    public void viewGGraph(View v)
+    {
+        Intent toGraph = new Intent(this, g_graph.class);
+        startActivity(toGraph);
+    }
+
 }

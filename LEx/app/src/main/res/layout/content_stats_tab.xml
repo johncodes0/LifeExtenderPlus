@@ -35,7 +35,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tv_title"
-        android:layout_centerHorizontal="true"
         android:layout_marginTop="60dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
@@ -43,10 +42,10 @@
         android:id="@+id/btn_calcRunTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="viewRGraph"
-        app:srcCompat="@mipmap/statsicon"
+        android:layout_alignStart="@+id/btn_calcGymTime"
         android:layout_below="@+id/btn_calcGymTime"
-        android:layout_alignStart="@+id/btn_calcGymTime" />
+        android:onClick="viewRGraph"
+        app:srcCompat="@mipmap/statsicon" />
 
     <ImageButton
         android:id="@+id/btn_calcWalkTime"

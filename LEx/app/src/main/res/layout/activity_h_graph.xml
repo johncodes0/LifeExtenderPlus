@@ -7,7 +7,7 @@
     <com.androidplot.xy.XYPlot
         android:id="@+id/plot"
         style="@style/APDefacto.Dark"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="fill_parent"
         ap:domainTitle="Day"
         ap:lineLabelRotationBottom="-45"
