@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+//Written by John Eng and Kevin Lee
+//Class to Add Active Periods to the schedule
+
 
 public class AddActivePeriod extends AppCompatActivity {
 
@@ -19,12 +22,15 @@ public class AddActivePeriod extends AppCompatActivity {
         TextView startTime = (TextView) findViewById(R.id.suggestStart);
         TextView endTime = (TextView) findViewById(R.id.suggestEnd);
 
+        //Gets times in each schedule finds the start and end times
+
         startTime.setText(HomeTab.startAPSuggestion + ":00");
         endTime.setText(HomeTab.endAPSuggestion + ":00");
 
     }
 
     public void acceptEvent(View v){
+        //Suggests event to user. If user accepts, will send it to the schedule
         eTime APSuggest = new eTime(0,0,HomeTab.startAPSuggestion,0,0,HomeTab.endAPSuggestion,"Active Period");
         HomeTab.sorted.add(APSuggest);
 

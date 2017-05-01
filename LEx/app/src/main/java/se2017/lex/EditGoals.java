@@ -11,6 +11,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
+//Written by Jayan A
+//Class edits goals within the Goals Tab
+
+
 public class EditGoals extends AppCompatActivity {
     private DatabaseReference mDatabase;
     public String userid = "jariy";

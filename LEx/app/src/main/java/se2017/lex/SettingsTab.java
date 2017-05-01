@@ -16,7 +16,7 @@ import android.support.v7.app.ActionBarActivity;
 
 /**
  * This class changes applicable settings that has parameters that affects the backend calendar code.
- *
+ *  Created by John Eng
  *
  */
 
@@ -37,23 +37,6 @@ public class SettingsTab extends AppCompatActivity {
         notif.setAutoCancel(true);
 
     }
-
-//    public void sendNotification(View view){
-//        notif.setSmallIcon(R.drawable.app_logo);
-//        notif.setTicker("Ticker");
-//        notif.setWhen(System.currentTimeMillis());
-//        notif.setContentTitle("LifeExtender+");
-//        notif.setContentText("Time to get some exercise!");
-//
-//        Intent intent = new Intent(this,HomeTab.class);
-////        startActivity(intent);
-//        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-//        notif.setContentIntent(pendingIntent);
-//
-//        NotificationManager nm =  (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-//        nm.notify(uniqueID,notif.build());
-//
-//    }
 
 
     //The rate at which the Google Maps will poll for GPS coordinates.

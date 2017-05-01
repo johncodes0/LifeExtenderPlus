@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+//WRitten by John Eng
+//Changes the profile in the App
+
 public class ChangeProfile extends AppCompatActivity {
 
     @Override

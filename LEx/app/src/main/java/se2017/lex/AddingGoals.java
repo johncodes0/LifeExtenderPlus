@@ -17,6 +17,8 @@ import java.util.Map;
 /**
  * This class allows for goals to be created.
  * It is referenced from the GoalsTab class.
+ * Written by Jayan A
+ *
  *
  */
 

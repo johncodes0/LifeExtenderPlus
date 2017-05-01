@@ -11,6 +11,7 @@ import android.widget.Button;
 
 /**
  * This class is referenced by all tabs, functioning as the visible tab selector on the bottom of the app.
+ * Written by Kyung Lee
  */
 
 

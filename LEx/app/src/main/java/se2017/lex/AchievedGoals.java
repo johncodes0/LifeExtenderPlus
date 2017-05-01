@@ -19,6 +19,9 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
 
+//Written by Jayan A
+//Class adds Achieved Goals to App and database
+
 
 public class AchievedGoals extends AppCompatActivity {
     private DatabaseReference fDatabase;
@@ -26,7 +29,7 @@ public class AchievedGoals extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-
+        //When fragment is created, will create a new array in order to store the Goals
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achieved_goals);
         fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/Goals");

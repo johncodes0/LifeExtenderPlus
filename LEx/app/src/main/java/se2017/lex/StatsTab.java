@@ -24,6 +24,8 @@ import java.util.Locale;
 
 /**
  * This class displays the HealthIndex while also being responsible for analysis of data.
+ *  Created by Chris Kim
+ *
  *
  */
 

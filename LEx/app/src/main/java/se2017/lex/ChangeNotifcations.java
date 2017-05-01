@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+//Written by John Eng
+//Class changes notification layout
+
+
 public class ChangeNotifcations extends AppCompatActivity {
 
     @Override

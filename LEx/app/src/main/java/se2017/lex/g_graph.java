@@ -37,6 +37,10 @@ import java.util.Date;
 import java.util.Arrays;
 import static se2017.lex.StatsTab.date;
 
+//Created by Kyung Lee
+//Settings and configuration for the graph
+
+
 public class g_graph extends AppCompatActivity {
     private XYPlot plot;
 

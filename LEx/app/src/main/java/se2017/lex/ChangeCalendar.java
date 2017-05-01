@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 
+//Written by Kevin Lee and John Eng
+//Changes the calandar to show the Active Periods
 
 public class ChangeCalendar extends AppCompatActivity {
 

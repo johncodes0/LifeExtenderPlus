@@ -13,6 +13,7 @@ import java.util.Map;
  * This is an object that contains data about the HealthIndex.
  * User's Health File; when the user wants to calculate their health index, the function
  * pulls information from these java objects to make the calculation
+ * Created by Chris Kim
  */
 
 

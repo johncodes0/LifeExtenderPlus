@@ -15,6 +15,10 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
+//LocationService in the background of the app running
+//Created by Daniel Huang
+
+
 public class LocationService extends Service
 {
     private static final String TAG = "BOOMBOOMTESTGPS";

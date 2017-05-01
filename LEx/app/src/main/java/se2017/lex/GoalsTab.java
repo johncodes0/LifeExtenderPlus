@@ -27,6 +27,7 @@ import static java.lang.Thread.sleep;
 
 /**
  * This class allows visibility of goals and interacts with AddingGoals class.
+ * Written by Jayan A
  *
  *
  */

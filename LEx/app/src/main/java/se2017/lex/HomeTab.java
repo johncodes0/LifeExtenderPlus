@@ -58,6 +58,9 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 /**
  * This class interacts with Google Calendar API.
+ * Written by John Eng and Kevin Lee
+ * Upon opening the app this page is shown
+ * User will be able to use the Google API to import their calendar
  */
 
 
@@ -123,36 +126,6 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_tab);
-
-        
-
-//        View disArr = findViewById(R.id.displayArray);
-//        for (int i = 0; i < sorted.size(); i++) {
-//            if (sorted.get(i) != null) {
-//
-//                //Text View to display name of goal and give a fraction on the completion progress of the goal
-//
-//                TextView listEvent = new TextView(this);
-//                listEvent.setText(sorted.get(i).name);
-//                listEvent.setTextSize(20);
-//                listEvent.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-//                ((LinearLayout) disArr).addView(listEvent);
-//
-//                TextView eventStart = new TextView(this);
-//                eventStart.setText("From: " + sorted.get(i).hourStart + ":" + String.format("%02d" ,sorted.get(i).minuteStart));
-//                eventStart.setTextSize(15);
-//                eventStart.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-//                ((LinearLayout) disArr).addView(eventStart);
-//
-//                TextView eventEnd = new TextView(this);
-//                eventEnd.setText("To: " + sorted.get(i).hourEnd + ":" + String.format("%02d", sorted.get(i).minuteEnd));
-//                eventEnd.setTextSize(15);
-//                eventEnd.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-//                ((LinearLayout) disArr).addView(eventEnd);
-//            }
-//        }
-
-
 
         View activityLayout = findViewById(R.id.eventList);
 

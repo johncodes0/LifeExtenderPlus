@@ -2,6 +2,7 @@ package se2017.lex;
 
 /**
  * Object that defines all the settings
+ * Created by John Eng
  */
 
 public class SettingsObject {

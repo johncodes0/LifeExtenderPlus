@@ -19,6 +19,11 @@ public class GoalObjects {
     super();
     }
 
+
+    //Written by Jayan A
+    //An Object that is stored by the database
+
+
     public GoalObjects(int cur, int tar, String nam,String key)
     {
         super();

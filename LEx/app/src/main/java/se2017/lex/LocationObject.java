@@ -16,6 +16,9 @@ public class LocationObject {
 
     public LocationObject(){ super();}
 
+    //Object in order to store Locations in the Database
+    //Created by Daniel Huang
+
     public LocationObject(double lati, double longit, float fast, String key)
     {
         this.lat = lati;
