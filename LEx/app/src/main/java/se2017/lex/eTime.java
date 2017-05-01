@@ -14,10 +14,9 @@ public class eTime {
         public long minuteEnd;
         public long hourEnd;
         public String name;
-        public long date;
 
 
-        public eTime(long sS, long mS, long hS, long sE, long mE, long hE, String n, long d){
+        public eTime(long sS, long mS, long hS, long sE, long mE, long hE, String n){
             this.secondStart = sS;
             this.minuteStart = mS;
             this.hourStart = hS;
@@ -25,7 +24,6 @@ public class eTime {
             this.minuteEnd = mE;
             this.hourEnd = hE;
             this.name = n;
-            this.date = d;
         }
 
 }

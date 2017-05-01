@@ -465,7 +465,6 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
             long minuteEnd;
             long hourEnd;
             long duration;
-            long date;
 
             sorted = new ArrayList<eTime>();
 
@@ -488,16 +487,15 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
                 secondEnd = (unformattedTimeEnd / 1000) % 60;
                 minuteEnd = (unformattedTimeEnd / (1000 * 60)) % 60;
                 hourEnd = (unformattedTimeEnd / (1000 * 60 * 60)) % 24-4;
-                date = unformattedTimeEnd/(1000*60*60*24)%365;
                 if(overlaps(items.get(i),items.get(i+1))){
                     sorted.add(new eTime(secondStart,minuteStart,hourStart,
                                     (items.get(i+1).getEnd().getDateTime().getValue()/ 1000 % 60),
                                     (items.get(i+1).getEnd().getDateTime().getValue()/ (1000 * 60) % 60),
                                     (items.get(i+1).getEnd().getDateTime().getValue()/(1000 * 60 * 60) % 24-4),
-                                    "Overlapping Event",date));
+                                    "Overlapping Event"));
                     i++;
                 } else {
-                    sorted.add(new eTime(secondStart,minuteStart,hourStart,secondEnd,minuteEnd,hourEnd,items.get(i).getSummary(),date));
+                    sorted.add(new eTime(secondStart,minuteStart,hourStart,secondEnd,minuteEnd,hourEnd,items.get(i).getSummary()));
                     if(i==(items.size()-1)){
                         sorted.add(new eTime(
                                 (items.get(i+1).getStart().getDateTime().getValue()/ 1000 % 60),
@@ -506,7 +504,7 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
                                 (items.get(i+1).getEnd().getDateTime().getValue()/ 1000 % 60),
                                 (items.get(i+1).getEnd().getDateTime().getValue()/ (1000 * 60) % 60),
                                 (items.get(i+1).getEnd().getDateTime().getValue()/(1000 * 60 * 60) % 24-4),
-                                items.get(i+1).getSummary(),date));
+                                items.get(i+1).getSummary()));
                     }
                 }
             }
@@ -613,8 +611,6 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
     public static long endAPSuggestion;
     public static boolean timeAvailable;
 
-    public static int indexAdd;
-
     public void findOpenTimes(View v) {
         for (int i = 1; i < sorted.size(); i++)
         {
@@ -623,7 +619,6 @@ public class HomeTab extends AppCompatActivity implements EasyPermissions.Permis
             {
                 startAPSuggestion = sorted.get(i-1).hourEnd;
                 endAPSuggestion = startAPSuggestion + 1;
-                indexAdd = i;
                 timeAvailable = true;
                 //Ask user if suggestion is okay
 

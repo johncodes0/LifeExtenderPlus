@@ -8,8 +8,6 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-import java.util.Arrays;
-
 
 public class AddActivePeriod extends AppCompatActivity {
 
@@ -27,12 +25,8 @@ public class AddActivePeriod extends AppCompatActivity {
     }
 
     public void acceptEvent(View v){
-        //asdf
-        eTime APSuggest = new eTime(0,0,HomeTab.startAPSuggestion,0,0,HomeTab.endAPSuggestion,"Active Period",0);
-        HomeTab.sorted.add(HomeTab.indexAdd ,APSuggest);
-
-
-
+        eTime APSuggest = new eTime(0,0,HomeTab.startAPSuggestion,0,0,HomeTab.endAPSuggestion,"Active Period");
+        HomeTab.sorted.add(APSuggest);
 
         Intent toHome = new Intent(this, HomeTab.class);
         startActivity(toHome);
