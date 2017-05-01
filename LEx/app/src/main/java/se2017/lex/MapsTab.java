@@ -380,7 +380,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         notif.setTicker("Ticker");
         notif.setWhen(System.currentTimeMillis());
         notif.setContentTitle("LifeExtender+");
-        notif.setContentText("You're near an Active Period Location! Recording Time!");
+        notif.setContentText("You're near an Active Period Location!, Recording Time at AP!");
 
         Intent intent = new Intent(this,HomeTab.class);
 //        startActivity(intent);
