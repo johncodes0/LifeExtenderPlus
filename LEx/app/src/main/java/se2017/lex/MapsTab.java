@@ -1,50 +1,5 @@
 package se2017.lex;
 
-//import android.support.v4.app.FragmentActivity;
-//import android.os.Bundle;
-//
-//import com.google.android.gms.maps.CameraUpdateFactory;
-//import com.google.android.gms.maps.GoogleMap;
-//import com.google.android.gms.maps.OnMapReadyCallback;
-//import com.google.android.gms.maps.SupportMapFragment;
-//import com.google.android.gms.maps.model.LatLng;
-//import com.google.android.gms.maps.model.MarkerOptions;
-//
-//public class MapsTab extends FragmentActivity implements OnMapReadyCallback {
-//
-//    private GoogleMap mMap;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_maps_tab);
-//        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-//                .findFragmentById(R.id.map);
-//        mapFragment.getMapAsync(this);
-//    }
-//
-//
-//    /**
-//     * Manipulates the map once available.
-//     * This callback is triggered when the map is ready to be used.
-//     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-//     * we just add a marker near Sydney, Australia.
-//     * If Google Play services is not installed on the device, the user will be prompted to install
-//     * it inside the SupportMapFragment. This method will only be triggered once the user has
-//     * installed Google Play services and returned to the app.
-//     */
-//    @Override
-//    public void onMapReady(GoogleMap googleMap) {
-//        mMap = googleMap;
-//
-//        // Add a marker in Sydney and move the camera
-//        LatLng sydney = new LatLng(-34, 151);
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
-//    }
-//}
-
 import android.Manifest;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -86,15 +41,11 @@ import com.google.firebase.database.ValueEventListener;
 import java.text.DateFormat;
 import java.util.Date;
 
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.support.v7.app.NotificationCompat;
-import android.support.v7.app.ActionBarActivity;
 
 
 /**
- * This class interacts with Google Maps API pulling GPS data and
- *
+ *  Class created by Daniel Huang
+ *  Class is used to display the Map when the map tab is clicked
  *
  */
 
@@ -123,14 +74,8 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
 
 
-    //public void getPollingRate()
-    //{
-    //  pollingRate = SettingsTab.getPollingRate();
-    //}
-
 
     protected void createLocationRequest() {
-        //getPollingRate();
         mLocationRequest = new LocationRequest();
         mLocationRequest.setInterval(pollingRate);
         mLocationRequest.setFastestInterval(pollingRate);
@@ -139,6 +84,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
 
     //All of the code used to get the Google Maps screen to display
+    //When the Map is created, it will create a new location request and a new notification item
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -163,15 +109,8 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
 
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+    //When the map is created, the app will create a map, make sure Google Play services are running,
+    //initialize the onclick listeners, and grab new data from the database, and place the AP markers gathered from the database.
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -195,12 +134,12 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         mMap.setOnMapLongClickListener(this);
 
 
-
+        //Database code
 
         fDatabase = FirebaseDatabase.getInstance().getReference(userid+"/ActivePeriodLocations");
         currDatabase = FirebaseDatabase.getInstance().getReference(userid+"/CurrLocations");
         APDatabase = FirebaseDatabase.getInstance().getReference(userid+"/TimeSpentAtAP");
-
+        //Creates an array of the APLocations
         fDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -224,6 +163,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
         int counter = 0;
 
+        //Traverses APLocation array in order to place new ones at each APLocation
         while (APLocArray[counter] != null)
         {
             LatLng latLng = new LatLng(APLocArray[counter].lat, APLocArray[counter].longi);
@@ -238,10 +178,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
     }
 
-    public void addAPMarkers(){
 
-
-    }
 
     protected synchronized void buildGoogleApiClient() {
         mGoogleApiClient = new GoogleApiClient.Builder(this)
@@ -276,6 +213,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     @Override
     public void onLocationChanged(Location location) {
 
+        //When Location changes, remove the current marker
         mLastLocation = location;
         if (mCurrLocationMarker != null) {
           mCurrLocationMarker.remove();
@@ -299,28 +237,24 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
         //Create child location with key
         String key = currDatabase.push().getKey();
-        //Create a new Goal Object (java class) to store goal info entered by the user
+        //Create a new Location Object (java class) to store goal info entered by the user
         LocationObject NewL = new LocationObject(location.getLatitude(), location.getLongitude(), location.getSpeed(), key);
-        //Stores the Goal into database
+        //Stores the Location into database
         currDatabase.child(key).setValue(NewL);
 
         if (isNearAP())
         {
             mCurrLocationMarker.setTitle("You are near an AP!");
             String key2 = APDatabase.push().getKey();
-            //Create a new Goal Object (java class) to store goal info entered by the user
+            //Create a new Location Object (java class) to store goal info entered by the user
             TimeObject NewT = new TimeObject(location.getTime(), key2);
-            //Stores the Goal into database
+            //Stores the Location into database
             APDatabase.child(key).setValue(NewT);
             sendNotification(null);
         }
 
 
 
-        //stop location updates
-        // if (mGoogleApiClient != null) {
-        //   LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
-        //}
 
     }
 
@@ -336,6 +270,9 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
     @Override
     public void onMapLongClick(LatLng point) {
+
+        //When Map is long clicked, the app will put a new Marker on the map, send that data to the database to be retrieved later.
+
         LatLng latLng = point;
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(latLng);
@@ -349,9 +286,9 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
         //Create child location with key
         String key = fDatabase.push().getKey();
-        //Create a new Goal Object (java class) to store goal info entered by the user
+        //Create a new Location Object (java class) to store goal info entered by the user
         LocationObject NewL = new LocationObject(APLoc.getLatitude(), APLoc.getLongitude(), APLoc.getSpeed(), key);
-        //Stores the Goal into database
+        //Stores the Location into database
         fDatabase.child(key).setValue(NewL);
 
     }
@@ -361,6 +298,7 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
 
     public boolean isNearAP()
     {
+        //method for determining near AP Points, gathering the AP's from the database and comparing currnet location.
         boolean near = false;
 
         int counter = 0;
@@ -376,6 +314,8 @@ public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
     }
 
     public void sendNotification(View view){
+
+        //Method to send notification when near AP
         notif.setSmallIcon(R.drawable.app_logo);
         notif.setTicker("Ticker");
         notif.setWhen(System.currentTimeMillis());
