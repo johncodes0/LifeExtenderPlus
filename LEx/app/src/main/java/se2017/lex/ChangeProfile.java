@@ -1,3 +1,10 @@
+// written by: John Eng
+// tested by: John Eng
+// debugged by: John Eng
+
+//
+
+
 package se2017.lex;
 
 import android.content.Intent;
@@ -5,8 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-//WRitten by John Eng
-//Changes the profile in the App
 
 public class ChangeProfile extends AppCompatActivity {
 

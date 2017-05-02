@@ -1,3 +1,9 @@
+// written by: John Eng
+// tested by: John Eng
+// debugged by: John Eng
+
+// adjusts the options for notifcations based on settings
+
 package se2017.lex;
 
 import android.content.Intent;
@@ -5,8 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-//Written by John Eng
-//Class changes notification layout
 
 
 public class ChangeNotifcations extends AppCompatActivity {

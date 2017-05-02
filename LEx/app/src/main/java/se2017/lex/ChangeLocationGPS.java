@@ -1,3 +1,9 @@
+// written by: John Eng
+// tested by: John Eng
+// debugged by: John Eng
+
+// adjusts polling rate of GPS based on settings
+
 package se2017.lex;
 
 import android.content.Intent;

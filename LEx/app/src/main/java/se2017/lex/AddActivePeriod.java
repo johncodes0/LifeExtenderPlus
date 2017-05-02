@@ -1,3 +1,9 @@
+// written by: John Eng and Kevin Lee
+// tested by: John Eng and Kevin Lee
+// debugged by: Kevin Lee
+
+// Class to Add Active Periods to the schedule
+
 package se2017.lex;
 
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +14,6 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
-//Written by John Eng and Kevin Lee
-//Class to Add Active Periods to the schedule
 
 
 public class AddActivePeriod extends AppCompatActivity {

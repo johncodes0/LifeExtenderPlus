@@ -1,3 +1,9 @@
+// written by: Trirmadura Ariyawansa and Kevin Lee
+// tested by: Kevin Lee
+// debugged by: Kevin Lee
+
+// Class adds Achieved Goals to App and database
+
 package se2017.lex;
 
 import android.content.Intent;
@@ -18,9 +24,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Arrays;
-
-//Written by Jayan A
-//Class adds Achieved Goals to App and database
 
 
 public class AchievedGoals extends AppCompatActivity {
@@ -88,6 +91,7 @@ public class AchievedGoals extends AppCompatActivity {
 
     }
 
+    // Back button
     public void goBack(View v){
         Intent newGoal = new Intent (this, GoalsTab.class);
         startActivity(newGoal);

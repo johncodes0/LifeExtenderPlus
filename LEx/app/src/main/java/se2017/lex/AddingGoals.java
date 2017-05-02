@@ -1,3 +1,11 @@
+// written by: Kevin Lee
+// tested by: Kevin Lee
+// debugged by: Kevin Lee
+
+// This class allows for goals to be created.
+// It is referenced from the GoalsTab class.
+
+
 package se2017.lex;
 
 import android.content.Intent;
@@ -12,15 +20,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.Map;
-
-
-/**
- * This class allows for goals to be created.
- * It is referenced from the GoalsTab class.
- * Written by Jayan A
- *
- *
- */
 
 
 public class AddingGoals extends AppCompatActivity {
