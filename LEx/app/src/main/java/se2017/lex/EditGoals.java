@@ -1,3 +1,11 @@
+// written by: Kevin Lee
+// tested by: Kevin Lee
+// debugged by: Kevin Lee
+
+// edits an existing GoalObject in the Goals Tab
+
+
+
 package se2017.lex;
 
 import android.content.Intent;
@@ -9,10 +17,6 @@ import android.widget.EditText;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-
-//Written by Jayan A
-//Class edits goals within the Goals Tab
 
 
 public class EditGoals extends AppCompatActivity {

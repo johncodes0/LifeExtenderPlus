@@ -1,8 +1,11 @@
-package se2017.lex;
+// written by: John Eng
+// tested by: John Eng
+// debugged by: John Eng
 
-/**
- * Created by TuneLynk on 4/24/2017.
- */
+// Java class for TimeObject that extracts the data from Google Calendar containing data
+// about the hour, minute, second, day, and name of each event's beginning and end time.
+
+package se2017.lex;
 
 public class eTime {
 

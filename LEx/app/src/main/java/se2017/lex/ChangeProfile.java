@@ -2,7 +2,7 @@
 // tested by: John Eng
 // debugged by: John Eng
 
-//
+// adjusts the status of the profile based on settings
 
 
 package se2017.lex;
