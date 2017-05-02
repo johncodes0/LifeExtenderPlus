@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * Created by huang on 4/24/2017.
- * Object for time that is stored in the database
+ * Object for time that is stored in the database by the applicataion
  */
 
 public class TimeObject {
