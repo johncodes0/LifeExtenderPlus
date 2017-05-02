@@ -1,5 +1,10 @@
-package se2017.lex;
+// written by: Kevin Lee
+// tested by: Kevin Lee
+// debugged by: Kevin Lee
 
+// tab that interacts with creating/editing GoalObjects and displaying them
+
+package se2017.lex;
 
 import android.provider.ContactsContract;
 import android.support.v7.app.ActionBar;
@@ -24,13 +29,6 @@ import com.google.firebase.database.ValueEventListener;
 import static java.lang.Thread.currentThread;
 import static java.lang.Thread.sleep;
 
-
-/**
- * This class allows visibility of goals and interacts with AddingGoals class.
- * Written by Jayan A
- *
- *
- */
 
 
 public class GoalsTab extends AppCompatActivity {

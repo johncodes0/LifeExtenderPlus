@@ -1,3 +1,9 @@
+// written by: Kyung Lee
+// tested by: Kyung Lee
+// debugged by: Kyung Lee
+
+// processes data for time spent at the gym
+
 package se2017.lex;
 
 import android.content.Intent;
@@ -37,8 +43,6 @@ import java.util.Date;
 import java.util.Arrays;
 import static se2017.lex.StatsTab.date;
 
-//Created by Kyung Lee
-//Settings and configuration for the graph
 
 
 public class g_graph extends AppCompatActivity {

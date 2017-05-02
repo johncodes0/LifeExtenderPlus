@@ -1,3 +1,9 @@
+// written by: Kyung Lee
+// tested by: Kyung Lee and Trirmadura Ariyawansa
+// debugged by: Kyung Lee and Trirmadura Ariyawansa
+
+// processes the data for the HealthIndex
+
 package se2017.lex;
 
 import android.content.Intent;

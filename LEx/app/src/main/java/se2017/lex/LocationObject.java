@@ -1,10 +1,9 @@
-/**
- * Written by Daniel Huang
- * Tested by Daniel Huang
- * Debugged by Daniel Huang
- * This class is for the database to store objects as LocationObjects
- *
- */
+// written by: Daniel Huang
+// tested by: Daniel Huang
+// debugged by: Daniel Huang
+
+// Java class for LocationObject that describes GPS data including the latitude, longitude, speed, and key (Hash) for the database
+
 
 
 package se2017.lex;

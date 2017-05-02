@@ -1,3 +1,10 @@
+// written by: John Eng
+// tested by: John Eng
+// debugged by: John Eng
+
+// processes changes to the settings and relays information over the other tabs
+
+
 package se2017.lex;
 
 import android.content.Intent;
@@ -11,14 +18,6 @@ import android.app.PendingIntent;
 import android.support.v7.app.NotificationCompat;
 import android.support.v7.app.ActionBarActivity;
 
-
-
-
-/**
- * This class changes applicable settings that has parameters that affects the backend calendar code.
- *  Created by John Eng
- *
- */
 
 public class SettingsTab extends AppCompatActivity {
 

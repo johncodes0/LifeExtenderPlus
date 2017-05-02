@@ -1,3 +1,13 @@
+// written by: John Eng and Kevin Lee
+// tested by: John Eng and Kevin Lee
+// debugged by: John Eng and Kevin Lee
+
+/**
+ * This class interacts with Google Calendar API.
+ * Upon opening the app this page is shown
+ * User will be able to use the Google API to import their calendar
+ */
+
 package se2017.lex;
 
 import android.support.v7.app.AppCompatActivity;
@@ -53,15 +63,6 @@ import java.util.List;
 
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.EasyPermissions;
-
-
-
-/**
- * This class interacts with Google Calendar API.
- * Written by John Eng and Kevin Lee
- * Upon opening the app this page is shown
- * User will be able to use the Google API to import their calendar
- */
 
 
 public class HomeTab extends AppCompatActivity implements EasyPermissions.PermissionCallbacks {

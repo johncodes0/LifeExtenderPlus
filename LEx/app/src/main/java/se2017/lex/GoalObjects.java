@@ -1,10 +1,14 @@
+// written by: Kevin Lee and John Eng
+// tested by: Kevin Lee and John Eng
+// debugged by: Kevin Lee
+
+
+// Java class for GoalsObject that contains arbitrary values for user input containin upper and lower bounds of the goal,
+// the name of the goal and a key(Hash) for the database
+
 package se2017.lex;
 
-/**
- * This is an object that contains data about Goals.
- *
- *
- */
+
 import java.util.HashMap;
 import java.util.Map;
 public class GoalObjects {

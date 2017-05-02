@@ -1,11 +1,8 @@
-/**
- * Written by Daniel Huang
- * Tested by Daniel Huang
- * Debugged by Daniel Huang
- * This class is for the Location Service of the application to run in the background
- *
- */
+// written by: Daniel Huang
+// tested by: Daniel Huang
+// debugged by: Daniel Huang
 
+// This class is for the Location Service of the application to run in the background
 
 package se2017.lex;
 
@@ -13,6 +10,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
 import com.google.firebase.database.ValueEventListener;
 
 import android.app.Service;
@@ -24,8 +22,6 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
-//LocationService in the background of the app running
-//Created by Daniel Huang
 
 
 public class LocationService extends Service

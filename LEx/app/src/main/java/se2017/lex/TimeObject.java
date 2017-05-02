@@ -1,3 +1,10 @@
+// written by: Daniel Huang
+// tested by: Daniel Huang
+// debugged by: Daniel Huang
+
+// Java class for time and date of Active Period locations
+
+
 package se2017.lex;
 
 import java.text.DateFormat;
@@ -5,10 +12,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by huang on 4/24/2017.
- * Object for time that is stored in the database
- */
 
 public class TimeObject {
     public Map<String, Boolean> stars = new HashMap<>();

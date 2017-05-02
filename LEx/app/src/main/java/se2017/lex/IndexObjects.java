@@ -1,6 +1,15 @@
+// written by: Chris Kim
+// tested by: Chris Kim and Kyung Lee
+// debugged by: Chris kim and Kyung Lee
+
+/**
+ *
+ * This is an object that contains data about the HealthIndex.
+ * User's Health File; when the user wants to calculate their health index, the function
+ * pulls information from these java objects to make the calculation
+ */
+
 package se2017.lex;
-
-
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -8,13 +17,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- *
- * This is an object that contains data about the HealthIndex.
- * User's Health File; when the user wants to calculate their health index, the function
- * pulls information from these java objects to make the calculation
- * Created by Chris Kim
- */
+
 
 
 public class IndexObjects {

@@ -1,10 +1,10 @@
-/**
- * Written by Daniel Huang
- * Tested by Daniel Huang
- * Debugged by Daniel Huang
- * This class is for the Maps Tab of the application
- *
- */
+//
+// written by: Daniel Huang
+// tested by: Daniel Huang
+// debugged by: Daniel Huang
+
+// interacts with the Google Maps Api to display a functional map on screen
+// as well as adding Active period locations, and GPS polling for coordinates
 
 package se2017.lex;
 

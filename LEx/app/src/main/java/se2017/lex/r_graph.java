@@ -1,3 +1,9 @@
+// written by: Kyung Lee
+// tested by: Kyung Lee
+// debugged by: Kyung Lee
+
+// processes the data for running times
+
 package se2017.lex;
 
 import android.content.Intent;

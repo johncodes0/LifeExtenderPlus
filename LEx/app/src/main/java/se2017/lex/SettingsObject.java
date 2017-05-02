@@ -1,9 +1,12 @@
+// written by: John Eng
+// tested by: John Eng
+// debugged by: John Eng
+
+// Java class for Settings object that includes the polling rate of the GPS,
+// the time the user wakes up, the public/private boolean for the HealthIndex and the mute setting for notifications
+
 package se2017.lex;
 
-/**
- * Object that defines all the settings
- * Created by John Eng
- */
 
 public class SettingsObject {
     public double pollingRate;

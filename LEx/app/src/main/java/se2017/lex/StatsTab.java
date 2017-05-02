@@ -1,3 +1,9 @@
+// written by: Kyung Lee, Chris Kim, and Trirmadura Ariyawansa
+// tested by: Kyung Lee, Trirmadura Ariyawansa
+// debugged by: Kyung Lee, Trirmadura Ariyawansa
+
+// interacts with the graph classes to display graphs based on the data collected (Health Index, Running/Walking, Gym Times)
+
 package se2017.lex;
 
 import android.content.Intent;
@@ -22,12 +28,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * This class displays the HealthIndex while also being responsible for analysis of data.
- *  Created by Chris Kim
- *
- *
- */
 
 public class StatsTab extends AppCompatActivity {
     public void viewHGraph(View v)
