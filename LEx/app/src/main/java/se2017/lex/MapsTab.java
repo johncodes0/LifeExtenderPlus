@@ -1,3 +1,11 @@
+/**
+ * Written by Daniel Huang
+ * Tested by Daniel Huang
+ * Debugged by Daniel Huang
+ * This class is for the Maps Tab of the application
+ *
+ */
+
 package se2017.lex;
 
 import android.Manifest;
@@ -43,11 +51,7 @@ import java.util.Date;
 
 
 
-/**
- *  Class created by Daniel Huang
- *  Class is used to display the Map when the map tab is clicked
- *
- */
+
 
 public class MapsTab extends FragmentActivity implements OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,

@@ -1,3 +1,12 @@
+/**
+ * Written by Daniel Huang
+ * Tested by Daniel Huang
+ * Debugged by Daniel Huang
+ * This class is for the Location Service of the application to run in the background
+ *
+ */
+
+
 package se2017.lex;
 
 import com.google.firebase.database.DataSnapshot;
