@@ -1,3 +1,12 @@
+/**
+ * Written by Daniel Huang
+ * Tested by Daniel Huang
+ * Debugged by Daniel Huang
+ * This class is for the database to store objects as LocationObjects
+ *
+ */
+
+
 package se2017.lex;
 
 import android.location.Location;
