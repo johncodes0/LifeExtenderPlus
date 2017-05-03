@@ -3,6 +3,7 @@
 // debugged by: John Eng
 
 // processes changes to the settings and relays information over the other tabs
+// Class Diagram: Settings Planner
 
 
 package se2017.lex;

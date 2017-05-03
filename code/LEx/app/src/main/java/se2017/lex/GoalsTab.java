@@ -3,6 +3,7 @@
 // debugged by: Kevin Lee
 
 // tab that interacts with creating/editing GoalObjects and displaying them
+// Class Diagram: GoalsMaker
 
 package se2017.lex;
 

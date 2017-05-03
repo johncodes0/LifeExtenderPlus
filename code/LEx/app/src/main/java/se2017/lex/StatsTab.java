@@ -3,6 +3,7 @@
 // debugged by: Kyung Lee, Trirmadura Ariyawansa
 
 // interacts with the graph classes to display graphs based on the data collected (Health Index, Running/Walking, Gym Times)
+// Class Diagram: HealthIndexCalculator and GraphMaker
 
 package se2017.lex;
 

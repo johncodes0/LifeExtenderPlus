@@ -5,6 +5,7 @@
 
 // interacts with the Google Maps Api to display a functional map on screen
 // as well as adding Active period locations, and GPS polling for coordinates
+// Class Diagram: Map Maker
 
 package se2017.lex;
 
