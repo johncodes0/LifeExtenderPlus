@@ -28,7 +28,7 @@ ABOUT:
 
 FILE DESCRIPTIIONS:
 
-The main code (Java files) are listed below with their descriptions. Each java file (except the ones dedicated to being objects) have an associated xml file under /res/layout directory. The associated icons are located in /res/drawable.
+The main code (Java files) are listed below with their descriptions. Each java file (except the ones dedicated to being objects) have an associated xml file under /res/layout directory. The associated icons are located in LifeExtenderPlus/code/LEx/app/src/main/res/drawable.
 
 
 *Note* - in Android, an activity that is created has a java file and an xml file. The xml files describe the layout designs and interact with the java files (e.g. button activates a method).
@@ -101,6 +101,10 @@ The required SDK's are managed within Android Studio under the SDK manager.
 		Google Repository
 
 Android Studio should be updated to the latest version. By clicking "Run App", an emulator must be installed 
+
+Open the project through File->Open…
+and navigate to LifeExtenderPlus/code/LEx
+
 (Create New Virtual Device -> (Phone) Nexus 5 -> Nougat -> Finish)
 The operating system will load and the app will automatically be opened (after APK's finish installing). The progress of the emulator will be shown on the status bar on the bottom of Android Studio.
 
