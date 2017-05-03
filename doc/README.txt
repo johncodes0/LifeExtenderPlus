@@ -32,6 +32,13 @@ The main code (Java files) are listed below with their descriptions. Each java f
 
 
 *Note* - in Android, an activity that is created has a java file and an xml file. The xml files describe the layout designs and interact with the java files (e.g. button activates a method).
+The following files act as Classes in the class diagram in the documentation:
+	HomeTab.java - EventPlanner
+	StatsTab.java - HealthIndexCalculator and GraphMaker
+	SettingsTab.java - SettingsPlanner
+	GoalsTab.java - GoalsMaker
+	MapsTab.java - MapMaker
+
 
 ACTIVITY FILES:
 
