@@ -1,0 +1,1385 @@
+{
+  "jariy" : {
+    "ActivePeriodLocations" : {
+      "-KiSkvvel9_kRXAzSt6c" : {
+        "lat" : 40.49035760007114,
+        "longi" : -74.43834129720926,
+        "n" : "-KiSkvvel9_kRXAzSt6c",
+        "speed" : 0
+      },
+      "-KiSltu8hiJZlmAh0-Sk" : {
+        "lat" : 40.491057778659815,
+        "longi" : -74.47472244501115,
+        "n" : "-KiSltu8hiJZlmAh0-Sk",
+        "speed" : 0
+      },
+      "-KiTRTeO5gkXtJaeijMU" : {
+        "lat" : 40.531643149652176,
+        "longi" : -74.43339429795742,
+        "n" : "-KiTRTeO5gkXtJaeijMU",
+        "speed" : 0
+      },
+      "-KiTRUqcsYpVEWeCmBQO" : {
+        "lat" : 40.52082314267011,
+        "longi" : -74.50988553464413,
+        "n" : "-KiTRUqcsYpVEWeCmBQO",
+        "speed" : 0
+      }
+    },
+    "CurrLocations" : {
+      "-KiT3ADclw13SiZUWttv" : {
+        "lat" : 40.5046,
+        "longi" : -74.4526,
+        "n" : "-KiT3ADclw13SiZUWttv",
+        "speed" : 5
+      },
+      "-KiT3ICZh-ZnDxT59D-d" : {
+        "lat" : 40.5046,
+        "longi" : -74.4526983,
+        "n" : "-KiT3ICZh-ZnDxT59D-d",
+        "speed" : 7
+      },
+      "-KiT5hZnd3kQyfO9-Wg6" : {
+        "lat" : 40.5046,
+        "longi" : -74.4527983,
+        "n" : "-KiT5hZnd3kQyfO9-Wg6",
+        "speed" : 6
+      },
+      "-KiT5i_BN35AD0o6qMlH" : {
+        "lat" : 40.5046,
+        "longi" : -74.4522983,
+        "n" : "-KiT5i_BN35AD0o6qMlH",
+        "speed" : 7
+      },
+      "-KiT5ji99pNapM0ckpJ9" : {
+        "lat" : 40.5046,
+        "longi" : -74.4528983,
+        "n" : "-KiT5ji99pNapM0ckpJ9",
+        "speed" : 6
+      },
+      "-KiT5lOc7Y1uXsh8CFEB" : {
+        "lat" : 40.5046,
+        "longi" : -74.4527983,
+        "n" : "-KiT5lOc7Y1uXsh8CFEB",
+        "speed" : 6
+      },
+      "-KiT5m_h3o60-WFtq6Bu" : {
+        "lat" : 40.5046,
+        "longi" : -74.453,
+        "n" : "-KiT5m_h3o60-WFtq6Bu",
+        "speed" : 7
+      },
+      "-KiT5ns5O7bWpZbN6wgc" : {
+        "lat" : 40.5046,
+        "longi" : -74.4549983,
+        "n" : "-KiT5ns5O7bWpZbN6wgc",
+        "speed" : 6
+      },
+      "-KiT5p-bqWGJoyC3m3GP" : {
+        "lat" : 40.5046,
+        "longi" : -74.4579983,
+        "n" : "-KiT5p-bqWGJoyC3m3GP",
+        "speed" : 3
+      },
+      "-KiTGFLGidkX248gMmj2" : {
+        "lat" : 40.5046,
+        "longi" : -74.4519983,
+        "n" : "-KiTGFLGidkX248gMmj2",
+        "speed" : 3
+      },
+      "-KiTGIfR0ziNwJWIPrNC" : {
+        "lat" : 40.5046,
+        "longi" : -74.4519983,
+        "n" : "-KiTGIfR0ziNwJWIPrNC",
+        "speed" : 5
+      },
+      "-KiTGIfaofjPnQLUWYu2" : {
+        "lat" : 40.5046,
+        "longi" : -74.4519983,
+        "n" : "-KiTGIfaofjPnQLUWYu2",
+        "speed" : 7
+      },
+      "-KiTMSy1GpgZpUScLqn5" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTMSy1GpgZpUScLqn5",
+        "speed" : 6
+      },
+      "-KiTMV89uaTdwsiYAtu4" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTMV89uaTdwsiYAtu4",
+        "speed" : 4
+      },
+      "-KiTMV8Oupofwq22JudS" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTMV8Oupofwq22JudS",
+        "speed" : 6
+      },
+      "-KiTRPywmDDczwlCe2GF" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRPywmDDczwlCe2GF",
+        "speed" : 0
+      },
+      "-KiTRRT4BXqz_k7sRSYI" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRRT4BXqz_k7sRSYI",
+        "speed" : 0
+      },
+      "-KiTRSlIfZ7RTQHaHU3C" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRSlIfZ7RTQHaHU3C",
+        "speed" : 0
+      },
+      "-KiTRSl_oROFgyye9Ck1" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRSl_oROFgyye9Ck1",
+        "speed" : 0
+      },
+      "-KiTRVZa15Rnsp_kCs14" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRVZa15Rnsp_kCs14",
+        "speed" : 0
+      },
+      "-KiTRVZuAY6EWuv6BRsl" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRVZuAY6EWuv6BRsl",
+        "speed" : 0
+      },
+      "-KiTRXOjPV1VEJA4Ze6z" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRXOjPV1VEJA4Ze6z",
+        "speed" : 0
+      },
+      "-KiTRXOq9fE5fjIrOwrO" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRXOq9fE5fjIrOwrO",
+        "speed" : 0
+      },
+      "-KiTRXP60Sj6t22TvlS9" : {
+        "lat" : 40.5046,
+        "longi" : -74.4699983,
+        "n" : "-KiTRXP60Sj6t22TvlS9",
+        "speed" : 0
+      },
+      "-KiTSUbKDXAwQ_yzvBj2" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTSUbKDXAwQ_yzvBj2",
+        "speed" : 0
+      },
+      "-KiTSUbOg4QzmTPDu71A" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTSUbOg4QzmTPDu71A",
+        "speed" : 0
+      },
+      "-KiTSUbYNayaMeifWj67" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTSUbYNayaMeifWj67",
+        "speed" : 0
+      },
+      "-KiTSfLAkRxYE69WO2ig" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTSfLAkRxYE69WO2ig",
+        "speed" : 0
+      },
+      "-KiTSfLLjzPMHbXLYphA" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTSfLLjzPMHbXLYphA",
+        "speed" : 0
+      },
+      "-KiTSfL_kDvJcEUED8kS" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTSfL_kDvJcEUED8kS",
+        "speed" : 0
+      },
+      "-KiTT7XBPxtkxKpBrpQ3" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTT7XBPxtkxKpBrpQ3",
+        "speed" : 0
+      },
+      "-KiTT7XL34aqS0179D1D" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTT7XL34aqS0179D1D",
+        "speed" : 0
+      },
+      "-KiTTwl3XlIVapRHBNxv" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTTwl3XlIVapRHBNxv",
+        "speed" : 0
+      },
+      "-KiTTzwunBgrMZXfCDN-" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTTzwunBgrMZXfCDN-",
+        "speed" : 0
+      },
+      "-KiTTzx9O1T0SalCD7mw" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTTzx9O1T0SalCD7mw",
+        "speed" : 0
+      },
+      "-KiTUzxKFW-3pF_gu-6o" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTUzxKFW-3pF_gu-6o",
+        "speed" : 0
+      },
+      "-KiTV0eniYhNNXVpHHFD" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTV0eniYhNNXVpHHFD",
+        "speed" : 0
+      },
+      "-KiTV0ex_Lm5at8Nr0HG" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTV0ex_Lm5at8Nr0HG",
+        "speed" : 0
+      },
+      "-KiTV64dIsCunTK4f4eG" : {
+        "lat" : 40.222,
+        "longi" : -74.555,
+        "n" : "-KiTV64dIsCunTK4f4eG",
+        "speed" : 0
+      },
+      "-KiTV8gtOYsW6K5JPL2s" : {
+        "lat" : 40.222,
+        "longi" : -74.555,
+        "n" : "-KiTV8gtOYsW6K5JPL2s",
+        "speed" : 0
+      },
+      "-KiTV8h85Xw28A35UDwY" : {
+        "lat" : 40.222,
+        "longi" : -74.555,
+        "n" : "-KiTV8h85Xw28A35UDwY",
+        "speed" : 0
+      },
+      "-KiTeHL92ps7_DQl2liC" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTeHL92ps7_DQl2liC",
+        "speed" : 0
+      },
+      "-KiTeIpRVA2waxfncuJO" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTeIpRVA2waxfncuJO",
+        "speed" : 0
+      },
+      "-KiTeKT25D8Lgnt0Xh4M" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTeKT25D8Lgnt0Xh4M",
+        "speed" : 0
+      },
+      "-KiTeKTIOT-78cEzge3n" : {
+        "lat" : 40.5046,
+        "longi" : -74.4599983,
+        "n" : "-KiTeKTIOT-78cEzge3n",
+        "speed" : 0
+      },
+      "-KiTePCjy1G11DMg-7F_" : {
+        "lat" : 40.5046,
+        "longi" : -74.45,
+        "n" : "-KiTePCjy1G11DMg-7F_",
+        "speed" : 0
+      },
+      "-KiTePD04UBBKe4wzVDt" : {
+        "lat" : 40.5046,
+        "longi" : -74.45,
+        "n" : "-KiTePD04UBBKe4wzVDt",
+        "speed" : 0
+      },
+      "-KiTePWmJPjcCrF2SwKu" : {
+        "lat" : 40.5046,
+        "longi" : -74.45,
+        "n" : "-KiTePWmJPjcCrF2SwKu",
+        "speed" : 0
+      },
+      "-KiTePWz4ZrnHIRWkHx4" : {
+        "lat" : 40.5046,
+        "longi" : -74.45,
+        "n" : "-KiTePWz4ZrnHIRWkHx4",
+        "speed" : 0
+      },
+      "-KiTeQbeQVQhlmhXebl_" : {
+        "lat" : 40.5046,
+        "longi" : -74.4399983,
+        "n" : "-KiTeQbeQVQhlmhXebl_",
+        "speed" : 0
+      },
+      "-KiTeQbqn5fILOgL6Dhu" : {
+        "lat" : 40.5046,
+        "longi" : -74.4399983,
+        "n" : "-KiTeQbqn5fILOgL6Dhu",
+        "speed" : 0
+      },
+      "-KiTeTwNEWPL0oa27XcN" : {
+        "lat" : 40.49,
+        "longi" : -74.4399983,
+        "n" : "-KiTeTwNEWPL0oa27XcN",
+        "speed" : 0
+      },
+      "-KiTeTwcWRwlMqdxDljD" : {
+        "lat" : 40.49,
+        "longi" : -74.4399983,
+        "n" : "-KiTeTwcWRwlMqdxDljD",
+        "speed" : 0
+      },
+      "-KiTeXylLa5SNQA23I6C" : {
+        "lat" : 40.49,
+        "longi" : -74.43,
+        "n" : "-KiTeXylLa5SNQA23I6C",
+        "speed" : 0
+      },
+      "-KiTeXz0L3_yTvRSq0Tl" : {
+        "lat" : 40.49,
+        "longi" : -74.43,
+        "n" : "-KiTeXz0L3_yTvRSq0Tl",
+        "speed" : 0
+      },
+      "-KiTeZjPrIPOaHpx1pVr" : {
+        "lat" : 40.49,
+        "longi" : -74.4249983,
+        "n" : "-KiTeZjPrIPOaHpx1pVr",
+        "speed" : 0
+      },
+      "-KiTeZjdgyMLX5eKONPK" : {
+        "lat" : 40.49,
+        "longi" : -74.4249983,
+        "n" : "-KiTeZjdgyMLX5eKONPK",
+        "speed" : 0
+      },
+      "-KiTe_8IpRTUvik8AJsu" : {
+        "lat" : 40.49,
+        "longi" : -74.4249983,
+        "n" : "-KiTe_8IpRTUvik8AJsu",
+        "speed" : 0
+      },
+      "-KiTe_8VEmhZq1wQSTl7" : {
+        "lat" : 40.49,
+        "longi" : -74.4249983,
+        "n" : "-KiTe_8VEmhZq1wQSTl7",
+        "speed" : 0
+      },
+      "-KiTebVBNurCkdgu_LQz" : {
+        "lat" : 40.49,
+        "longi" : -74.43,
+        "n" : "-KiTebVBNurCkdgu_LQz",
+        "speed" : 0
+      },
+      "-KiTebVRCBOsRZm0UVNN" : {
+        "lat" : 40.49,
+        "longi" : -74.43,
+        "n" : "-KiTebVRCBOsRZm0UVNN",
+        "speed" : 0
+      },
+      "-KiTecqyFXO28WERtevJ" : {
+        "lat" : 40.49,
+        "longi" : -74.435,
+        "n" : "-KiTecqyFXO28WERtevJ",
+        "speed" : 0
+      },
+      "-KiTecrL4GtDlaalWn8r" : {
+        "lat" : 40.49,
+        "longi" : -74.435,
+        "n" : "-KiTecrL4GtDlaalWn8r",
+        "speed" : 0
+      },
+      "-KiTegB_hP3s7srOQT11" : {
+        "lat" : 40.49,
+        "longi" : -74.4355,
+        "n" : "-KiTegB_hP3s7srOQT11",
+        "speed" : 0
+      },
+      "-KiTegBx4a7D8-_DmCD_" : {
+        "lat" : 40.49,
+        "longi" : -74.4355,
+        "n" : "-KiTegBx4a7D8-_DmCD_",
+        "speed" : 0
+      },
+      "-KiTehyQtA2rwcBZmg8i" : {
+        "lat" : 40.4949983,
+        "longi" : -74.4355,
+        "n" : "-KiTehyQtA2rwcBZmg8i",
+        "speed" : 0
+      },
+      "-KiTehyfi9LYvYSQcnp2" : {
+        "lat" : 40.4949983,
+        "longi" : -74.4355,
+        "n" : "-KiTehyfi9LYvYSQcnp2",
+        "speed" : 0
+      },
+      "-KiTej8nW0_6DkE6kn9t" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4355,
+        "n" : "-KiTej8nW0_6DkE6kn9t",
+        "speed" : 0
+      },
+      "-KiTej91CmBFStUFUyIy" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4355,
+        "n" : "-KiTej91CmBFStUFUyIy",
+        "speed" : 0
+      },
+      "-KiTelsI4SUroMSSp9SZ" : {
+        "lat" : 40.4904983,
+        "longi" : -74.43555,
+        "n" : "-KiTelsI4SUroMSSp9SZ",
+        "speed" : 0
+      },
+      "-KiTelsVNQ_2Kkd7nWdF" : {
+        "lat" : 40.4904983,
+        "longi" : -74.43555,
+        "n" : "-KiTelsVNQ_2Kkd7nWdF",
+        "speed" : 0
+      },
+      "-KiTenEkgg-S7Dy9LXtP" : {
+        "lat" : 40.4904983,
+        "longi" : -74.436,
+        "n" : "-KiTenEkgg-S7Dy9LXtP",
+        "speed" : 0
+      },
+      "-KiTer561yYGPMcLK54X" : {
+        "lat" : 40.4904983,
+        "longi" : -74.436,
+        "n" : "-KiTer561yYGPMcLK54X",
+        "speed" : 0
+      },
+      "-KiTeuKTl5fXrueC5yHf" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTeuKTl5fXrueC5yHf",
+        "speed" : 0
+      },
+      "-KiTexQIsYQgULqfkAN5" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTexQIsYQgULqfkAN5",
+        "speed" : 0
+      },
+      "-KiTeyiprvl1Lk_J8P3J" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTeyiprvl1Lk_J8P3J",
+        "speed" : 0
+      },
+      "-KiTfNdnNxP45LIn6AiP" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTfNdnNxP45LIn6AiP",
+        "speed" : 0
+      },
+      "-KiTfckDkY-TC0_oUGfL" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTfckDkY-TC0_oUGfL",
+        "speed" : 0
+      },
+      "-KiTfeIn_8Rr0556BbMs" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTfeIn_8Rr0556BbMs",
+        "speed" : 0
+      },
+      "-KiTff8zjbaQR7uLRcUm" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTff8zjbaQR7uLRcUm",
+        "speed" : 0
+      },
+      "-KiTff99sgy7btG3zdHm" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTff99sgy7btG3zdHm",
+        "speed" : 0
+      },
+      "-KiTg9R7II3TGTtz-0vO" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTg9R7II3TGTtz-0vO",
+        "speed" : 0
+      },
+      "-KiTgBHeP64xj09fIkCp" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTgBHeP64xj09fIkCp",
+        "speed" : 0
+      },
+      "-KiTgBHpW5BD3xpC_1wQ" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4369983,
+        "n" : "-KiTgBHpW5BD3xpC_1wQ",
+        "speed" : 0
+      },
+      "-KiTgVSdsHBnzxKCzU9c" : {
+        "lat" : 40.4904983,
+        "longi" : -74.438,
+        "n" : "-KiTgVSdsHBnzxKCzU9c",
+        "speed" : 0
+      },
+      "-KiTgVT0h_qkHJebZb62" : {
+        "lat" : 40.4904983,
+        "longi" : -74.438,
+        "n" : "-KiTgVT0h_qkHJebZb62",
+        "speed" : 0
+      },
+      "-KiTgYfjzTmqyLABUf1L" : {
+        "lat" : 40.4904983,
+        "longi" : -74.436,
+        "n" : "-KiTgYfjzTmqyLABUf1L",
+        "speed" : 0
+      },
+      "-KiTgYfufg3j6MBu7wsW" : {
+        "lat" : 40.4904983,
+        "longi" : -74.436,
+        "n" : "-KiTgYfufg3j6MBu7wsW",
+        "speed" : 0
+      },
+      "-KiTgaKv9gUAAyH1EAOD" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiTgaKv9gUAAyH1EAOD",
+        "speed" : 0
+      },
+      "-KiTgaLBYAO8mv_-2rxU" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiTgaLBYAO8mv_-2rxU",
+        "speed" : 0
+      },
+      "-KiTgdTKsDP7AOe3HHoB" : {
+        "lat" : 40.4904983,
+        "longi" : -74.438,
+        "n" : "-KiTgdTKsDP7AOe3HHoB",
+        "speed" : 0
+      },
+      "-KiTgdTZKr5p6DluuLqb" : {
+        "lat" : 40.4904983,
+        "longi" : -74.438,
+        "n" : "-KiTgdTZKr5p6DluuLqb",
+        "speed" : 0
+      },
+      "-KiTggjAUNenYlvTnWqD" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiTggjAUNenYlvTnWqD",
+        "speed" : 0
+      },
+      "-KiTggjRX73QL-TE1E_7" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiTggjRX73QL-TE1E_7",
+        "speed" : 0
+      },
+      "-KiTiqo4sHlMG-CHXjId" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiTiqo4sHlMG-CHXjId",
+        "speed" : 0
+      },
+      "-KiTiqoGzlQ51A7-6EQ8" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiTiqoGzlQ51A7-6EQ8",
+        "speed" : 0
+      },
+      "-KiTiqoQBQtxT_PtYfvR" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiTiqoQBQtxT_PtYfvR",
+        "speed" : 0
+      },
+      "-KiVcD6dKfCfgPLWnyMa" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiVcD6dKfCfgPLWnyMa",
+        "speed" : 0
+      },
+      "-KiVcFXMDI_qEFtacGYQ" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiVcFXMDI_qEFtacGYQ",
+        "speed" : 0
+      },
+      "-KiVcFXl4hjT1klniF0M" : {
+        "lat" : 40.4904983,
+        "longi" : -74.435,
+        "n" : "-KiVcFXl4hjT1klniF0M",
+        "speed" : 0
+      },
+      "-KiVcITlteRGmPhxdTX4" : {
+        "lat" : 40.4904983,
+        "longi" : -74.436,
+        "n" : "-KiVcITlteRGmPhxdTX4",
+        "speed" : 0
+      },
+      "-KiVcIU-bYx3hUXfSX4_" : {
+        "lat" : 40.4904983,
+        "longi" : -74.436,
+        "n" : "-KiVcIU-bYx3hUXfSX4_",
+        "speed" : 0
+      },
+      "-KiVcRMvN8g3dj6UUb8b" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVcRMvN8g3dj6UUb8b",
+        "speed" : 0
+      },
+      "-KiVcRN7s9tGyZQtPEJv" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVcRN7s9tGyZQtPEJv",
+        "speed" : 0
+      },
+      "-KiVcl7QMfyjIyqAkVTz" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVcl7QMfyjIyqAkVTz",
+        "speed" : 0
+      },
+      "-KiVcl7tVHXIEZgzH7JU" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVcl7tVHXIEZgzH7JU",
+        "speed" : 0
+      },
+      "-KiVcl8FVgh8f4ze7e77" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVcl8FVgh8f4ze7e77",
+        "speed" : 0
+      },
+      "-KiVeoejLfgbGZsiJDNK" : {
+        "lat" : 40.5225983,
+        "longi" : -74.4587983,
+        "n" : "-KiVeoejLfgbGZsiJDNK",
+        "speed" : 0
+      },
+      "-KiVeofwFnJ2rAA0ksdr" : {
+        "lat" : 40.5225983,
+        "longi" : -74.4587983,
+        "n" : "-KiVeofwFnJ2rAA0ksdr",
+        "speed" : 0
+      },
+      "-KiVewuQ8rwtvKHXfve2" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVewuQ8rwtvKHXfve2",
+        "speed" : 0
+      },
+      "-KiVewv9Ultp_qsqUW4X" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVewv9Ultp_qsqUW4X",
+        "speed" : 0
+      },
+      "-KiVeySu5bb6DrC553D2" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVeySu5bb6DrC553D2",
+        "speed" : 0
+      },
+      "-KiVeyTWpJz5JY-LGuHp" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVeyTWpJz5JY-LGuHp",
+        "speed" : 0
+      },
+      "-KiViV9vVaiGKkdiu1Yx" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiViV9vVaiGKkdiu1Yx",
+        "speed" : 0
+      },
+      "-KiViaWbFcMEic4NUHep" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiViaWbFcMEic4NUHep",
+        "speed" : 0
+      },
+      "-KiViaX_UBojD17zNY1N" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiViaX_UBojD17zNY1N",
+        "speed" : 0
+      },
+      "-KiVicGDhEtiD2AArK0J" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVicGDhEtiD2AArK0J",
+        "speed" : 0
+      },
+      "-KiVicGa4EQ3yDtgWAH2" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVicGa4EQ3yDtgWAH2",
+        "speed" : 0
+      },
+      "-KiVifDXqEN5kGOqQOfF" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVifDXqEN5kGOqQOfF",
+        "speed" : 0
+      },
+      "-KiVifE4_jI3RarKBFwu" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVifE4_jI3RarKBFwu",
+        "speed" : 0
+      },
+      "-KiVighnTi9KK0JpQywF" : {
+        "lat" : 40.4904983,
+        "longi" : -74,
+        "n" : "-KiVighnTi9KK0JpQywF",
+        "speed" : 0
+      },
+      "-KiVigi5jqVZgNTuh6Rx" : {
+        "lat" : 40.4904983,
+        "longi" : -74,
+        "n" : "-KiVigi5jqVZgNTuh6Rx",
+        "speed" : 0
+      },
+      "-KiViivfRfDCYzhJQNgW" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiViivfRfDCYzhJQNgW",
+        "speed" : 0
+      },
+      "-KiViiwhHXxZ6I0DOqLz" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiViiwhHXxZ6I0DOqLz",
+        "speed" : 0
+      },
+      "-KiVij7QPKvFPOLNmspB" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVij7QPKvFPOLNmspB",
+        "speed" : 0
+      },
+      "-KiVij7vgy9h-qu_oeCU" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVij7vgy9h-qu_oeCU",
+        "speed" : 0
+      },
+      "-KiVj7jQZjayTAu2Z-Sb" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVj7jQZjayTAu2Z-Sb",
+        "speed" : 0
+      },
+      "-KiVj8vPrHda5VTR03uT" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVj8vPrHda5VTR03uT",
+        "speed" : 0
+      },
+      "-KiVjAPhAy2A4YnaYmbA" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVjAPhAy2A4YnaYmbA",
+        "speed" : 0
+      },
+      "-KiVjAQ9oFwhlytLxsjl" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVjAQ9oFwhlytLxsjl",
+        "speed" : 0
+      },
+      "-KiVjFTD7Eyn8txJt9Nj" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiVjFTD7Eyn8txJt9Nj",
+        "speed" : 0
+      },
+      "-KiW0Tc3zLsim9Hg32Rp" : {
+        "lat" : 40.222,
+        "longi" : -74.555,
+        "n" : "-KiW0Tc3zLsim9Hg32Rp",
+        "speed" : 0
+      },
+      "-KiW0Z8jGgUJ5t_6Rl8c" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW0Z8jGgUJ5t_6Rl8c",
+        "speed" : 0
+      },
+      "-KiW0bYt6kVNYXNgeiXa" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW0bYt6kVNYXNgeiXa",
+        "speed" : 0
+      },
+      "-KiW0bZ2ArbtEJibQBoc" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW0bZ2ArbtEJibQBoc",
+        "speed" : 0
+      },
+      "-KiW0hw4lm-771LXUY5F" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW0hw4lm-771LXUY5F",
+        "speed" : 0
+      },
+      "-KiW0kZqEoCK6ems0ox-" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW0kZqEoCK6ems0ox-",
+        "speed" : 0
+      },
+      "-KiW0k_KKkNBpfeDqHJY" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW0k_KKkNBpfeDqHJY",
+        "speed" : 0
+      },
+      "-KiW0qa9qiWI2NM1HDtk" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW0qa9qiWI2NM1HDtk",
+        "speed" : 0
+      },
+      "-KiW0qapZ4aXX6zLkUOL" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW0qapZ4aXX6zLkUOL",
+        "speed" : 0
+      },
+      "-KiW0rKrFsI-yqkqHv7k" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW0rKrFsI-yqkqHv7k",
+        "speed" : 0
+      },
+      "-KiW0rLCy14ONLD4TCgN" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW0rLCy14ONLD4TCgN",
+        "speed" : 0
+      },
+      "-KiW1g6kIU8suvp2jIqS" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1g6kIU8suvp2jIqS",
+        "speed" : 0
+      },
+      "-KiW1g7FbZ9etcvFECfC" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1g7FbZ9etcvFECfC",
+        "speed" : 0
+      },
+      "-KiW1g7lORWekSWrdB66" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1g7lORWekSWrdB66",
+        "speed" : 0
+      },
+      "-KiW1mKMKV_c-Tx8590Y" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW1mKMKV_c-Tx8590Y",
+        "speed" : 0
+      },
+      "-KiW1mKo4FCU64nel1l_" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW1mKo4FCU64nel1l_",
+        "speed" : 0
+      },
+      "-KiW1mLhkqwAsCwbG1xH" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW1mLhkqwAsCwbG1xH",
+        "speed" : 0
+      },
+      "-KiW1peH8lkngW6mQ9Th" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1peH8lkngW6mQ9Th",
+        "speed" : 0
+      },
+      "-KiW1peUfMikt22kS8is" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1peUfMikt22kS8is",
+        "speed" : 0
+      },
+      "-KiW1peugBl-Ev2E5Vj9" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1peugBl-Ev2E5Vj9",
+        "speed" : 0
+      },
+      "-KiW1yMCNNRNnL_y58Am" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1yMCNNRNnL_y58Am",
+        "speed" : 0
+      },
+      "-KiW1yMEJL1KRUtHhj-L" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1yMEJL1KRUtHhj-L",
+        "speed" : 0
+      },
+      "-KiW1yMOZWmWejqXAFDn" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1yMOZWmWejqXAFDn",
+        "speed" : 0
+      },
+      "-KiW1yMYhMdV4DC0t67l" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiW1yMYhMdV4DC0t67l",
+        "speed" : 0
+      },
+      "-KiW2pb_cV6VUQMhnvbp" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW2pb_cV6VUQMhnvbp",
+        "speed" : 0
+      },
+      "-KiW2pc3drSolODqU4LJ" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiW2pc3drSolODqU4LJ",
+        "speed" : 0
+      },
+      "-KiWCL9xoNCxqDFE1SgC" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiWCL9xoNCxqDFE1SgC",
+        "speed" : 0
+      },
+      "-KiWCLAAQuUaeRxDGh7t" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4634983,
+        "n" : "-KiWCLAAQuUaeRxDGh7t",
+        "speed" : 0
+      },
+      "-KiWCdy36warFUopYl7i" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiWCdy36warFUopYl7i",
+        "speed" : 0
+      },
+      "-KiWCdz-zOcub1BxvmqK" : {
+        "lat" : 40.4904983,
+        "longi" : -74.4364983,
+        "n" : "-KiWCdz-zOcub1BxvmqK",
+        "speed" : 0
+      }
+    },
+    "Goals" : {
+      "-KiVrf4UziVS78f31dOM" : {
+        "c" : 99,
+        "com" : false,
+        "k" : "-KiVrf4UziVS78f31dOM",
+        "n" : "Pass Software Engineering",
+        "t" : 100
+      },
+      "-KiVrnZjHNOEVrwxjdff" : {
+        "c" : 200,
+        "com" : false,
+        "k" : "-KiVrnZjHNOEVrwxjdff",
+        "n" : "Deadlift ",
+        "t" : 500
+      },
+      "-KiVrwCItgWpqMqZk0-X" : {
+        "c" : 8,
+        "com" : true,
+        "k" : "-KiVrwCItgWpqMqZk0-X",
+        "n" : "Sleep More",
+        "t" : 8
+      },
+      "-KiVs6sFQgoPX-J4FsZ7" : {
+        "c" : 50,
+        "com" : false,
+        "k" : "-KiVs6sFQgoPX-J4FsZ7",
+        "n" : "Practice Coding",
+        "t" : 55
+      },
+      "-KiWAk9NFm6PywNVSDQP" : {
+        "c" : 1,
+        "com" : false,
+        "k" : "-KiWAk9NFm6PywNVSDQP",
+        "n" : "jog 3 miles",
+        "t" : 3
+      }
+    },
+    "HI" : {
+      "-Kj4qGjbt-TuQdCZPyZc" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170401
+      },
+      "-Kj4qQL9Fho911AdXjqC" : {
+        "HITime" : 30,
+        "LITime" : 50,
+        "currentHI" : 470,
+        "date" : 20170402
+      },
+      "-Kj4qRGGVYM2uRA_ONnB" : {
+        "HITime" : 30,
+        "LITime" : 60,
+        "currentHI" : 600,
+        "date" : 20170403
+      },
+      "-Kj4qSR_s7eOj5OO2uo4" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 730,
+        "date" : 20170501
+      },
+      "-Kj4qvFs3Kq-shqQ-hdK" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj4rvkOLtid76x_zzb-" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj4rxgCocjA9OsenDvv" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 470,
+        "date" : 20170501
+      },
+      "-Kj4sdd_hHw9trSNFCB8" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj4seV3BCzoLxtPvIwG" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 470,
+        "date" : 20170501
+      },
+      "-Kj4sefLDhc0yGb0b0zM" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 600,
+        "date" : 20170501
+      },
+      "-Kj4stWeyWsyZGu9JoKc" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj4t8rWRwvI0E9iIqBH" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj4trcQCkqb8Uuam_p0" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj4u0gdxs4emtRYJQ3a" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj4vSBlfTwOKwljyoZN" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj52xTtKkNaxwVfddtl" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj52y_axm27nBWqNZ7k" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 470,
+        "date" : 20170501
+      },
+      "-Kj52ydmcRP5bHAg28gj" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 600,
+        "date" : 20170501
+      },
+      "-Kj52yhVHcxKqdEgFZ7_" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 730,
+        "date" : 20170501
+      },
+      "-Kj533ctaut9xR9qMpUu" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 860,
+        "date" : 20170501
+      },
+      "-Kj533fkCYzPoo-pRUbF" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 990,
+        "date" : 20170501
+      },
+      "-Kj533l5eQ-yZMFapFzV" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 1120,
+        "date" : 20170501
+      },
+      "-Kj533ql0be4gJY4ARJ0" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 1250,
+        "date" : 20170501
+      },
+      "-Kj533x4vpE4_ogWjd75" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 1380,
+        "date" : 20170501
+      },
+      "-Kj53FJoOUSA02L0N-pU" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj53RyOz4lpqydH0Qt5" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 470,
+        "date" : 20170501
+      },
+      "-Kj54ZL05HjMybA-qYpX" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj54vrLZt67WbATkIdX" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 470,
+        "date" : 20170501
+      },
+      "-Kj55p39Smm2TQz2xRYt" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 340,
+        "date" : 20170501
+      },
+      "-Kj55u1Jix2jeF-CXAwk" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 470,
+        "date" : 20170501
+      },
+      "-Kj56oOFm3rpO_4oMMvT" : {
+        "HITime" : 30,
+        "LITime" : 40,
+        "currentHI" : 600,
+        "date" : 20170501
+      }
+    },
+    "TimeSpentAtAP" : {
+      "-KiVcITlteRGmPhxdTX4" : {
+        "date" : 1493077373000,
+        "n" : "-KiVcITnftB9KKsKAsu_"
+      },
+      "-KiVcIU-bYx3hUXfSX4_" : {
+        "date" : 1493077373000,
+        "n" : "-KiVcIU1r5tVgJReCcvK"
+      },
+      "-KiVcRMvN8g3dj6UUb8b" : {
+        "date" : 1493077410000,
+        "n" : "-KiVcRMvN8g3dj6UUb8c"
+      },
+      "-KiVcRN7s9tGyZQtPEJv" : {
+        "date" : 1493077410000,
+        "n" : "-KiVcRN8CZPhqQ8AvKQO"
+      },
+      "-KiVcl7QMfyjIyqAkVTz" : {
+        "date" : 1493077495000,
+        "n" : "-KiVcl7RcEztwVMfv6dt"
+      },
+      "-KiVcl7tVHXIEZgzH7JU" : {
+        "date" : 1493077495000,
+        "n" : "-KiVcl7uxqLZ_hEnKYtB"
+      },
+      "-KiVcl8FVgh8f4ze7e77" : {
+        "date" : 1493077495000,
+        "n" : "-KiVcl8GmBvZaaEhO3a2"
+      },
+      "-KiVewuQ8rwtvKHXfve2" : {
+        "date" : 1493078065000,
+        "n" : "-KiVewuUHtAW3RTPp9SR"
+      },
+      "-KiVewv9Ultp_qsqUW4X" : {
+        "date" : 1493078065000,
+        "n" : "-KiVewvB-aEDFFWFbJBB"
+      },
+      "-KiVeySu5bb6DrC553D2" : {
+        "date" : 1493078072000,
+        "n" : "-KiVeySwy81wR9T5WqGV"
+      },
+      "-KiVeyTWpJz5JY-LGuHp" : {
+        "date" : 1493078072000,
+        "n" : "-KiVeyTXxRePwS5w66OM"
+      },
+      "-KiViV9vVaiGKkdiu1Yx" : {
+        "date" : 1493078998000,
+        "n" : "-KiViV9x4050THeodZC6"
+      },
+      "-KiViaWbFcMEic4NUHep" : {
+        "date" : 1493079022000,
+        "n" : "-KiViaWn_OCXLAfJCOLT"
+      },
+      "-KiViaX_UBojD17zNY1N" : {
+        "date" : 1493079022000,
+        "n" : "-KiViaXa9YL70v7rRceV"
+      },
+      "-KiVicGDhEtiD2AArK0J" : {
+        "date" : 1493079031000,
+        "n" : "-KiVicGE9Am2oavhC_CW"
+      },
+      "-KiVicGa4EQ3yDtgWAH2" : {
+        "date" : 1493079031000,
+        "n" : "-KiVicGbmHb-cNGut4eF"
+      },
+      "-KiVifDXqEN5kGOqQOfF" : {
+        "date" : 1493079044000,
+        "n" : "-KiVifDYWQZrQaKTT_n8"
+      },
+      "-KiVifE4_jI3RarKBFwu" : {
+        "date" : 1493079044000,
+        "n" : "-KiVifE57spCf8rHgA77"
+      },
+      "-KiViivfRfDCYzhJQNgW" : {
+        "date" : 1493079059000,
+        "n" : "-KiViiviM8fsAWY46Zq8"
+      },
+      "-KiViiwhHXxZ6I0DOqLz" : {
+        "date" : 1493079059000,
+        "n" : "-KiViiwj33swKWvOq5lB"
+      },
+      "-KiVij7QPKvFPOLNmspB" : {
+        "date" : 1493079057000,
+        "n" : "-KiVij7SmMM8Cqd5dUDC"
+      },
+      "-KiVij7vgy9h-qu_oeCU" : {
+        "date" : 1493079057000,
+        "n" : "-KiVij7wzqVebt4oiTPF"
+      },
+      "-KiVj7jQZjayTAu2Z-Sb" : {
+        "date" : 1493079164000,
+        "n" : "-KiVj7jR4DOuM9bay4T9"
+      },
+      "-KiVj8vPrHda5VTR03uT" : {
+        "date" : 1493079169000,
+        "n" : "-KiVj8vRdM5ETsuxv6ci"
+      },
+      "-KiVjAPhAy2A4YnaYmbA" : {
+        "date" : 1493079175000,
+        "n" : "-KiVjAPjSEdDAfT9BPkd"
+      },
+      "-KiVjAQ9oFwhlytLxsjl" : {
+        "date" : 1493079175000,
+        "n" : "-KiVjAQAeykMvE9eXI2_"
+      },
+      "-KiVjFTD7Eyn8txJt9Nj" : {
+        "date" : 1493079194000,
+        "n" : "-KiVjFTL61t7kmCaVibZ"
+      },
+      "-KiW0hw4lm-771LXUY5F" : {
+        "date" : 1493084035000,
+        "n" : "-KiW0hw5ZjncG-szTCif"
+      },
+      "-KiW0kZqEoCK6ems0ox-" : {
+        "date" : 1493084044000,
+        "n" : "-KiW0kZrDuBStNPw5WKM"
+      },
+      "-KiW0k_KKkNBpfeDqHJY" : {
+        "date" : 1493084044000,
+        "n" : "-KiW0k_KKkNBpfeDqHJZ"
+      },
+      "-KiW0rKrFsI-yqkqHv7k" : {
+        "date" : 1493084074000,
+        "n" : "-KiW0rKsVTf2hHTbecSr"
+      },
+      "-KiW0rLCy14ONLD4TCgN" : {
+        "date" : 1493084074000,
+        "n" : "-KiW0rLCy14ONLD4TCgO"
+      },
+      "-KiW1mKMKV_c-Tx8590Y" : {
+        "date" : 1493084313000,
+        "n" : "-KiW1mKNBBC3M3kWCWQ9"
+      },
+      "-KiW1mKo4FCU64nel1l_" : {
+        "date" : 1493084313000,
+        "n" : "-KiW1mKo4FCU64nel1la"
+      },
+      "-KiW1mLhkqwAsCwbG1xH" : {
+        "date" : 1493084313000,
+        "n" : "-KiW1mLiT6EW6Q2ZCKHH"
+      },
+      "-KiW2pb_cV6VUQMhnvbp" : {
+        "date" : 1493084591000,
+        "n" : "-KiW2pbdTl2uTDMm-EA0"
+      },
+      "-KiW2pc3drSolODqU4LJ" : {
+        "date" : 1493084591000,
+        "n" : "-KiW2pc4msvQ1UETtK4p"
+      },
+      "-KiWCdy36warFUopYl7i" : {
+        "date" : 1493087162000,
+        "n" : "-KiWCdy6lMZFT3VWxSGm"
+      },
+      "-KiWCdz-zOcub1BxvmqK" : {
+        "date" : 1493087162000,
+        "n" : "-KiWCdz5bS1CK1MNwQPW"
+      }
+    }
+  },
+  "kyung" : {
+    "Goals" : "null",
+    "HI" : "null"
+  }
+}
